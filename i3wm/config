@@ -1,0 +1,386 @@
+# Should you change your keyboard layout some time, delete
+# this file and re-run i3-config-wizard(1).
+
+# i3 config file (v4)
+#
+# Please see https://i3wm.org/docs/userguide.html for a complete reference!
+
+set $mod Mod4
+set $up j
+set $down k
+set $left h
+set $right l
+
+focus_follows_mouse no
+
+#exec "scrot -b -m 分割线/tmp/screenshot.png && xclip -selection clipoard -t 'image/png' /tmp/screenshot.png"
+bindsym --release $mod+Shift+a exec --no-startup-id "scrot -bmpe 'mv $f ~/Downloads/ScreenShot/'"
+bindsym --release $mod+Shift+s exec --no-startup-id "scrot -ubmpe 'mv $f ~/Downloads/ScreenShot/'"
+bindsym --release $mod+Shift+d exec --no-startup-id "scrot -sbmpe 'mv $f ~/Downloads/ScreenShot/'"
+# -q 100
+bindsym --release $mod+Shift+q exec --no-startup-id "scrot -bmpq 100 -e 'mv $f ~/Downloads/ScreenShot/'"
+bindsym --release $mod+Shift+w exec --no-startup-id "scrot -ubmpq 100 -e 'mv $f ~/Downloads/ScreenShot/'"
+bindsym --release $mod+Shift+t exec --no-startup-id "scrot -sbmpe 'mv $f ~/Downloads/ScreenShot/'"
+bindsym --release $mod+Shift+o exec --no-startup-id "scrot -bmpq 100 -cd 5 -e 'mv $f ~/Downloads/ScreenShot/'"
+
+# scrot+ocr+xclip
+# bindsym $mod+Shift+g exec "bash /home/lg/Downloads/ScreenShot/ocr_temp/scrot_ocr_xclip.sh"
+# bindsym $mod+Shift+g exec "st"
+
+
+# bindsym $mod+Return exec termite
+bindsym $mod+Return exec st
+# bindsym $mod+c exec dmenu_run
+bindsym $mod+c exec dmenu_run -nb black -sb tomato -l 10
+bindsym $mod+t exec --no-startup-id rofi -show window
+bindsym $mod+space exec --no-startup-id rofi -show run
+
+set $mode_launcher firefox(F),chrome(G),telegram(T),tim(Q),wechat(W),falkon(O),st(S),termite(J)urxvt(U),pcmanfm(E),zathura(Z);
+bindsym $mod+o mode "$mode_launcher"
+mode "$mode_launcher" {
+        # bindsym g exec --no-startup-id google-chrome-stable --proxy-server="socks5://127.0.0.1:10889",mode "default"
+        # bindsym h exec --no-startup-id google-chrome-stable --no-proxy-server,mode "default"
+        bindsym g exec --no-startup-id google-chrome-stable ,mode "default"
+        bindsym f exec --no-startup-id firefox,mode "default"
+        bindsym t exec --no-startup-id telegram-desktop,mode "default"
+        bindsym q exec --no-startup-id ~/Programs/wine-appimg/TIM-x86_64.AppImage,mode "default"
+        bindsym w exec --no-startup-id ~/Programs/wine-appimg/Wechat-2.6.8.65-x86_64.AppImage,mode "default"
+        bindsym e exec --no-startup-id pcmanfm,mode "default"
+        bindsym o exec --no-startup-id falkon,mode "default"
+        bindsym z exec --no-startup-id zathura,mode "default"
+        bindsym s exec --no-startup-id st,mode "default"
+        bindsym j exec --no-startup-id termite,mode "default"
+        bindsym u exec --no-startup-id urxvt,mode "default"
+# bindsym a exec urxvt -name floating ,mode "default"
+
+        bindsym Escape mode "default"
+        bindsym Return mode "default"
+}
+# for_window [class="URxvt" instance="floating"] floating enable,resize set 772 463,move position center
+
+
+bindsym $mod+i move position center
+# bindsym $mod+shift+n resize set 772 503,move position center
+bindsym $mod+shift+n resize set 766 469,move position center
+# bindsym $mod+shift+n resize set 768 470,move position center
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
+
+new_window none
+new_float normal
+hide_edge_borders both
+
+# bindsym $mod+t border normal
+# bindsym $mod+u border 1pixel
+# bindsym $mod+Shift+u border none
+
+# default_border pixel 0
+#********************************************i3-gaps*********************************
+for_window [class="^.*"] border pixel 2
+
+# Plan-bule
+# gaps inner 0
+# gaps outer 0
+# for_window [workspace=$ws2] gaps inner current set 20, gaps outer current set 100
+
+# Plan-dark
+gaps inner 9
+gaps outer 4
+for_window [workspace=$ws2] gaps inner current set 15, gaps outer current set 80
+for_window [workspace=$ws3] gaps inner current set 0, gaps outer current set 0
+for_window [workspace=$ws5] gaps inner current set 0, gaps outer current set 0
+
+set $mode_gaps Gaps: (o) outer, (i) inner, (s) short(0, 0) (l) long(20, 100), (r) reset(9, 4)
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+bindsym $mod+g mode "$mode_gaps"
+
+mode "$mode_gaps" {
+    bindsym o      mode "$mode_gaps_outer"
+        bindsym i      mode "$mode_gaps_inner"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym s gaps inner current set 0, gaps outer current set 0 ,mode "default"
+        bindsym l gaps inner current set 15, gaps outer current set 80 ,mode "default"
+        bindsym r gaps inner current set 9, gaps outer current set 4 ,mode "default"
+}
+
+mode "$mode_gaps_inner" {
+    bindsym plus  gaps inner current plus 5
+        bindsym minus gaps inner current minus 5
+        bindsym 0     gaps inner current set 0
+
+        bindsym Shift+plus  gaps inner all plus 5
+        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+0     gaps inner all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "$mode_gaps_outer" {
+    bindsym plus  gaps outer current plus 5
+        bindsym minus gaps outer current minus 5
+        bindsym 0     gaps outer current set 0
+
+        bindsym Shift+plus  gaps outer all plus 5
+        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+0     gaps outer all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+#   龜      
+set $ws1 "1: CODE"
+set $ws2 "2: SYSX"
+set $ws3 "3: SURF"
+set $ws4 "4: TGIM"
+set $ws5 "5: VIRT"
+set $ws6 "6: TORR"
+set $ws7 "7: CRYS"
+set $ws8 "8: MASK"
+set $ws9 "9: POWR"
+set $ws10 "10: UNIX"
+
+# switch to workspace
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+
+floating_modifier $mod
+bindsym $mod+q kill
+bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+# semicolon == ;
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+h focus left
+bindsym $mod+l focus right
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+bindsym $mod+Shift+v split h
+bindsym $mod+v split v
+bindsym $mod+Shift+i split toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+# The right button toggles floating
+bindsym button3 floating toggle
+bindsym $mod+button3 floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+n focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+# focus the child container
+#bindsym $mod+d focus child
+
+mode "resize" {
+    bindsym $left       resize shrink width 10 px or 10 ppt
+        bindsym $down       resize grow height 10 px or 10 ppt
+        bindsym $up         resize shrink height 10 px or 10 ppt
+        bindsym $right      resize grow width 10 px or 10 ppt
+        bindsym Left        resize shrink width 10 px or 10 ppt
+        bindsym Down        resize grow height 10 px or 10 ppt bindsym Up
+        bindsym Right       resize shrink height 10 px or 10 ppt bindsym
+        bindsym Up          resize grow width 10 px or 10 ppt
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+# floating_minimum_size 772 x 463 # noto sans mono 9
+floating_maximum_size -1x-1
+
+# Use pactl to adjust volume in PulseAudio.
+# set $refresh_i3status killall -SIGUSR1 i3status
+# bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+# bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+# bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+# bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+bindsym XF86MonBrightnessUp exec "xbacklight -inc 20"
+bindsym XF86MonBrightnessDown exec "xbacklight -dec 20"
+bindsym XF86AudioRaiseVolume exec amixer set Master playback 5+
+bindsym XF86AudioLowerVolume exec amixer set Master playback 5-
+# bindsym XF86AudioMute exec amixer set Master toggle
+bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle
+
+# Media player controls
+# bindsym XF86AudioPlay exec playerctl play-pause
+# bindsym XF86AudioPause exec playerctl play-pause
+# bindsym XF86AudioNext exec playerctl next
+# bindsym XF86AudioPrev exec playerctl previous
+
+bindsym XF86AudioPlay exec "mpc toggle"
+bindsym XF86AudioStop exec "mpc stop"
+bindsym XF86AudioNext exec "mpc next"
+bindsym XF86AudioPrev exec "mpc prev"
+
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec_always --no-startup-id xautolock -time 8 -locker /usr/bin/i3lock-fancy
+exec_always --no-startup-id xautolock -time 60 -locker "systemctl suspend" &
+
+# bindsym $mod+Shift+l exec i3lock #-i ~/Downloads/Documents/GlbDk.jpg
+# bindsym $mod+Shift+l exec "scrot /tmp/lockscreen.png && mogrify -scale 50% -gaussian-blur 0x4 -gamma 0.8 -scale 200% /tmp/lockscreen.png && i3lock -i /tmp/lockscreen.png"
+
+# 电源管理
+set $mode_system  lock(L) logout(O) suspend(P) hibernate(H) reboot(R) shutdown(S) exit(Esc)
+    bindsym $mod+p mode "$mode_system"
+    mode "$mode_system" {
+        bindsym l exec --no-startup-id i3lock-fancy , mode "default"
+            bindsym o exec --no-startup-id i3-msg exit, mode "default"
+            bindsym p exec --no-startup-id systemctl suspend,exec --no-startup-id i3lock-fancy , mode "default"
+            bindsym h exec --no-startup-id systemctl hibernate, mode "default"
+            bindsym r exec --no-startup-id systemctl reboot, mode "default"
+            bindsym s exec --no-startup-id systemctl poweroff, mode "default"
+            bindsym Escape mode "default"
+    }
+
+bindsym $mod+Shift+m move scratchpad
+bindsym $mod+m scratchpad show
+
+workspace_auto_back_and_forth yes
+focus_on_window_activation no
+show_marks yes
+
+# xprop | grep WM_CLASS 命令获取wm_class
+# assign [class="Google-chrome"] $WS3
+# assign [class="wechat.exe"] $WS4
+# assign [class="Tim.exe"] $WS4
+# assign [class="Steam"] $WS5
+assign [class="Telegram"] $WS4
+assign [class="VirtualBox"] $WS5
+assign [class="qBittorrent"] $WS6
+
+bindsym $mod+Shift+semicolon exec i3-input -f pango:mono -F 'mark %s' -l 1 -P 'Mark: '
+bindsym $mod+semicolon exec i3-input -f pango:mono -F '[con_mark="%s"] focus' -l 1 -P 'Goto: '
+
+for_window [class=obs] floating enable
+for_window [class=mpv] floating enable
+for_window [class=Pcmanfm] floating enable
+for_window [class=qv2ray] floating enable
+for_window [class=gvim] floating enable
+for_window [class=Tim.exe] floating enable
+for_window [class=wechat.exe] floating enable
+for_window [class=Wine] floating enable
+for_window [class=qq] floating enable
+for_window [class=qBittorrent] floating enable
+for_window [class=Telegram] floating enable
+for_window [class="VirtualBox Manager"] floating enable
+for_window [class="sun-awt-X11-XFramePeer"] floating enable
+for_window [class="calculator-calculatorGui"] floating enable
+for_window [class=feh] floating enable, move absolute position center
+for_window [class=Sxiv] floating enable, move absolute position center
+#**************************************************主题设置*********************************************
+# font pango:DejaVu Sans Mono Bold 8.5
+# font pango:Fira Code Medium 8.5
+font pango:Sarasa Gothic SC Bold 8.5
+
+# $focu #333333
+# $ufocu #1c1c1c #101010
+
+# set $focu #00ced1
+set $focu #00ffff
+set $ufocu #1e1e1e
+set $font #c0c0c0
+set $ufont #5d5d5d
+set $tfont #2f4f4f
+set $urg #D7005F
+# set $blu #1F75FE
+set $blu #44ff00
+set $gre #44ff00
+set $bg #1b1d1e
+# set $bg #121212
+# set $bg #232629
+# set $bg #181A1B
+
+# 窗口颜色              边框  背景  文字  提示
+client.focused          $focu90 $focu $tfont $blu
+client.focused_inactive $ufocu90 $ufocu $ufont $blu
+client.unfocused        $ufocu90 $ufocu $ufont $blu
+client.urgent           $urg90 $urg $font $urg
+client.placeholder      $font90 $font $bg $font
+client.background       $bg
+
+#i3bar设置
+bar {
+    # i3bar_command i3bar -t
+    i3bar_command i3bar
+        height 19
+# tray_output none
+        tray_padding 1
+        status_command i3status
+        status_command ~/.config/i3status/net-speed.sh
+        position top
+# position bottom
+# mode dock
+# hidden_state hide
+# strip_workspace_numbers no
+        # font pango:DejaVu Sans Mono Bold 9
+font pango:Fira Code Bold 8.5
+        # font pango: Sarasa Gothic CL bold 9
+        separator_symbol "  "
+
+#    ¶ ⊘ ∥ ➔ ➥ 
+        colors {
+            background $bg
+                statusline $font
+                separator #555666
+# 工作区颜色       边框     背景        文字
+                focused_workspace  $gre90     $gre      $bg
+                active_workspace   $bg      $bg         $font
+                inactive_workspace $bg      $bg         $ufont
+                urgent_workspace   $urg90     $urg      $bg
+                binding_mode       $urg90     $urg      $bg
+        }
+}
+# exec_always --no-startup-id feh --bg-scale "/home/lg/Desktop/wp/darkHeart.jpg"
+exec_always --no-startup-id feh --bg-scale "/home/lg/Desktop/wp/Forever-Shady-S.jpg"
+# screen 黑屏 睡眠 断电
+# exec --no-startup-id xset dpms 600 15000 30000
+# xrandr
+# exec --no-startup-id xrand --output eDP1 --mode 1920x1080 --same-as HDMI2

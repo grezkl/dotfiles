@@ -1,0 +1,73 @@
+[options]
+# Slab means the Latins will have serifs
+font = Sarasa Mono CL Semibold 12
+# font = Sarasa Fixed Slab CL Semibold 12
+# font = Sarasa Term SC Semibold 12
+
+# font = Terminus (TTF) Medium 12
+# font = xos4 Terminus 12
+# font = Terminus Medium 12
+# font = TerminessTTF Nerd Font Mono 12
+
+allow_bold = true
+# audible_bell = 
+bold_is_right = true
+clickable_url = true
+hyperlinks = true
+cursor_blink = on
+# cursor_shape = block
+# dynamic_title = true
+# filter_unmatched_urls = 
+# fullscreen = 
+# icon_name = 
+# cell_height_scale = 
+# cell_widht_scale = 
+# modify_other_keys = 
+mouse_autohide = true
+scrollback_lines = 65536
+scrollbar=off
+# scrollbar_on_keystroke = 
+# scroll_on_output = 
+search_wrap = true
+# size_hints = 
+# urgent_on_bell = 
+
+# geometry=832x624
+
+[colors]
+# background = rgba(0,0,0,0.7)
+background = rgba(8,8,8,0.70)
+# background = rgba(43,46,47,0.9)
+# background = rgba(44,44,44,0.7)
+# background = #121212
+# background = #2c2c2c
+#292b2e
+cursor = #bbbbbb
+foreground = #bbbbbb
+color0 = #1b1d1e
+color1 = #CD0000
+# color1 = #D7005F
+color2 = #44ff00
+# color2 = #ffff00
+color3 = #f67400
+# color4 = #1080d0
+# color4 = #268BD2
+color4 = #0000ff
+color5 = #CD00CD
+# color5 = #8C54FE
+color6  = #00bbff
+color7 = #bbbbbb
+color8  = #555555
+color9 = #FF0000
+color10 = #00FF00
+color11 = #FFFF00
+color12 = #1f75fe
+# color12 = #3333ff
+color13 = #FF00FF
+color14 = #00FFFF
+color15 = #FFFFFF
+colorBD = #ffffff
+colorIT =
+colorUL =
+
+

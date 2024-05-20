@@ -1,0 +1,32 @@
+
+
+# fcitx
+# GTK_IM_MODULE 	DEFAULT=fcitx
+# QT_IM_MODULE 	DEFAULT=fcitx
+XMODIFIERS 	DEFAULT=@im=fcitx
+INPUT_METHOD 	DEFAULT=fcitx
+SDL_IM_MODULE 	DEFAULT=fcitx
+
+# firefox
+MOZ_ENBALE_WAYLAND=1
+WTF=WhatTheFuck
+
+# oth
+
+QT_QPA_PLATFORM=wayland
+
+#GDK 程序会自动优先选择wayland程序,所以无需设置
+#GDK_BACKEND=wayland
+
+CLUTTER_BACKEND=wayland
+
+XDG_CURRENT_DESKTOP=sway
+XDG_SESSION_DESKTOP=sway
+
+# java
+# _JAVA_AWT_WM_NONREPARENTING=1
+
+# steam
+# 不要将SDL_VIDEODRIVER设置成wayland, 不然steam里面的游戏启动不了
+##SDL_VIDEODRIVER=wayland
+#SDL_VIDEODRIVER=x11 

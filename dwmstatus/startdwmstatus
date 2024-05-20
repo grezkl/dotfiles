@@ -1,0 +1,7 @@
+#!/bin/sh
+
+killall -q dwmstatus
+
+while true; do
+    dwmstatus 2> ~/.wm_log/dwmstatus.log
+done

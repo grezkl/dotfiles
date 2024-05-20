@@ -1,0 +1,176 @@
+#
+# wm independent hotkeys
+#
+
+# terminal emulator
+super + Return
+	alacritty
+
+super + shift + Return
+	urxvt
+	# termite
+
+# program launcher
+super + @space
+	rofi -show drun
+	# dmenu_run -m 0 -fn "Sarasa Mono CL Semibold:size=10" -nb "#1a1a1a" -nf "#c0c0c0" -sb "#00ffff" -sf "#202020"
+
+# make sxhkd reload its configuration files:
+super + alt + e
+	pkill -USR1 -x sxhkd
+
+#
+# bspwm hotkeys
+#
+
+# quit/restart bspwm
+super + alt + {q,r}
+	bspc {quit,wm -r}
+
+# close and kill
+# super + {_,alt + }w
+super + {shift ,alt + }q
+	bspc node -{c,k}
+
+# alternate between the tiled and monocle layout
+super + m
+	bspc desktop -l next
+
+# send the newest marked node to the newest preselected node
+super + shift + y
+	bspc node newest.marked.local -n newest.!automatic.local
+
+# swap the current node and the biggest window
+super + shift + g
+	bspc node -s biggest.window
+
+#
+# state/flags
+#
+
+# set the window state
+# super + {n,shift + space,t,shift + t}
+#	bspc node -t {tiled,floating,pseudo_tiled,fullscreen}
+
+super + {n,t,f}
+	bspc node -t {tiled,pseudo_tiled,fullscreen}
+
+# floating and resize
+super + shift + space
+	bspc node -t floating & wtp 740 400 1400 1000 "$(pfw)" # 2880x1800
+	# bspc node -t floating & xdotool getactivewindow windowsize 1400 1000
+
+# set the node flags
+super + ctrl + {p, v}
+	bspc node -g {locked,private}
+
+super + {y, p}
+	bspc node -g {marked, sticky}
+
+#
+# focus/swap
+#
+
+# focus the node in the given direction
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# focus the node for the given path jump
+super + {_, shift + }v
+	bspc node -f @{parent,brother}
+
+super + bracket{left,right}
+	bspc node -f @{first,second}
+
+# focus the next/previous window in the current desktop
+super + {_,shift + }s
+	bspc node -f {next,prev}.local.!hidden.window
+
+# focus the next/previous desktop in the current monitor
+super + {comma,period}
+	bspc desktop -f {prev,next}.local
+
+# focus the last node/desktop
+# grave == '`'
+super + {a,Tab}
+	bspc {node,desktop} -f last
+
+# focus the older or newer node in the focus history
+super + alt + {o,i}
+	bspc wm -h off; \
+	bspc node {older,newer} -f; \
+	bspc wm -h on
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+#
+# preselect
+#
+
+# preselect the direction
+super + ctrl + {h,j,k,l}
+	bspc node -p {west,south,north,east}
+
+# preselect the ratio
+super + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+# cancel the preselection for the focused node
+super + ctrl + space
+	bspc node -p cancel
+
+# cancel the preselection for the focused desktop
+super + ctrl + shift + space
+	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+#
+# move/resize
+#
+
+# expand a window by moving one of its side outward
+super + alt + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# contract a window by moving one of its side inward
+super + alt + shift + {h,j,k,l}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# move a floating window
+super + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+# 
+# system/application
+#
+
+# backlight
+super + alt + bracket{left,right}
+    light {-U 5,-A 5}
+    # xbacklight {-dec 5,-inc 5}
+    
+# volumn
+super + shift + bracket{left,right}
+    pactl set-sink-volume 0 {-5%,+5%}
+    # amixer set Master playback {5-,5+}
+
+super + ctrl + m
+    pactl set-sink-mute 0 toggle
+
+# music player & mpc 
+super + {z,x,c}
+    mpc {prev,toggle,next}
+
+# screenshots & scrot
+super + {u,i,o,shift + i,shift + o}
+    scrot {-bmpe,-ubmpe,-sbmpe,-bmpq 100 -e,-bmpq 100 -cd 5 -e} 'mv $f ~/media/pictures/screenshots/'
+
+# lockscreen & i3lock
+super + shift + p
+    i3lock -n -B picom --indicator -k --time-color="D7005F" --date-color="D7005F" --ring-color="1a1a1a" --keyhl-color="D7005f"
+
+    # i3lock -n -B picom --indicator -k --timecolor="D7005F" --datecolor="D7005F" --ringcolor="1a1a1a" --keyhlcolor="D7005f"
+# suspend
+super + alt + p
+    systemctl suspend

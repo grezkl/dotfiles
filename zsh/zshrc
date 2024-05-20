@@ -1,0 +1,12 @@
+setopt PROMPT_SUBST
+unsetopt correct
+setopt clobber
+
+source $XDG_CONFIG_HOME/zsh/utils_env.sh
+source $XDG_CONFIG_HOME/zsh/lgfs_prompt.sh
+source $XDG_CONFIG_HOME/zsh/alias.sh
+source $XDG_CONFIG_HOME/zsh/.zpreztorc
+
+# fortune -a | fmt -80 -s | $(shuf -n 1 -e cowsay cowthink) -$(shuf -n 1 -e b d g p s t w y) -f $(shuf -n 1 -e $(cowsay -l | tail -n +2)) -n | lolcat
+printf "<< $(date)\n$(pfetch)" | lolcat
+

@@ -1,0 +1,23 @@
+{
+    "diagnostic.errorSign":"",
+    "diagnostic.warningSign":"",
+    "pairs.enableCharacters":["(", "[", "{", "\"", "`"],
+    // "diagnostic.displayByAle":false,
+    // "diagnostic.level":"information",
+    // "diagnostic.checkCurrentLine":true,
+    // "diagnostic.messageTarget":"float",
+    "languageserver": {
+        "clangd": {
+            "command": "clangd",
+            "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
+            "filetypes": ["c", "cpp", "objc", "objcpp"]
+        },
+        "golang": {
+            "command": "gopls",
+            "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+            "disableWorkspaceFolders": true,
+            "filetypes": ["go"]
+  }
+    }
+}
+

@@ -1,0 +1,1 @@
+/home/greanoia/.dotfiles/zsh/fsph_prompt.sh

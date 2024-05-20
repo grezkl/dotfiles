@@ -1,0 +1,41 @@
+browser.tabs.closeWindowWithLastTab false
+network.http.max-persistent-connections-per-server 16
+ui.systemUsesDarkTheme 1
+browser.search.separatePrivateDefault.ui.enabled true
+geo.enabled false
+media.navigator.enabled & media.peerconnection.enabled false
+network.cookie.thirdparty.nonsecureSessionOnly true
+security.insecure_connection_text.enabled true
+security.insecure_connection_text.pbmode.enabled true
+network.proxy.socks_remote_dns true
+dom.security.https_only_mode true
+gfx.direct2d.disabled true
+webgl.disabled true
+network.IDN_show_punycode true
+network.security.esni.enabled true
+security.secure_connection_icon_color_gray false
+beacon.enabled false
+dom.event.clipboardevents.enabled false
+
+// auto
+network.prefetch-nex false
+network.dns.disablePrefetch true
+media.peerconnection.enabled false
+network.trr.mode 2
+network.http.speculative-parallel-limit 0
+browser.send_pings false
+security.tls.version.min 3
+media.navigator.enabled false
+media.peerconnection.enabled false
+
+// webRTC
+media.peerconnection.turn.disable true
+media.peerconnection.use_document_iceservers false
+media.peerconnection.video.enabled false
+media.peerconnection.video.vp9_enabled false
+media.peerconnection.identity.enabled false
+media.peerconnection.identity.timeout 1
+
+
+/* browser.tabs.tabmanager.enabled true */
+// browser.display.background_color #363636

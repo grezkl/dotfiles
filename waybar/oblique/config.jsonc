@@ -1,0 +1,283 @@
+// -*- mode: jsonc -*-
+{
+    // "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 20, // Waybar height (to be removed for auto height)
+    //"width": 1800, // Waybar width
+    "spacing": 0, // Gaps between modules (4px)
+    "fixed-center":false,
+    "reload_style_on_change":true,
+    // Choose the order of the modules
+    "modules-left": [
+        "custom/archlogo",
+        "custom/ld",
+
+        "custom/ru",
+        "hyprland/workspaces",
+        "custom/rd"
+    ],
+    "modules-center": [
+        "custom/lu",
+        "hyprland/submap",
+        "custom/ld",
+        "custom/ru",
+        "hyprland/window",
+        "custom/rd"
+    ],
+    "modules-right": [
+        "custom/lu",
+        "network",
+        "custom/rd",
+
+        "custom/lu",
+        "cpu",
+        "custom/ar",
+        "memory",
+        "custom/ar",
+        "temperature",
+        "custom/rd",
+
+        "custom/lu",
+        "pulseaudio",
+        "custom/ar",
+        "battery",
+        "custom/ar",
+        "clock",
+        "custom/rd",
+
+        "custom/lu",
+        "tray"
+    ],
+    // Modules configuration
+    "custom/lu":{
+        "format": "<span></span>",
+        "tooltip":false
+    },
+    "custom/ru":{
+        "format": "<span></span>",
+        "tooltip":false
+    },
+    "custom/ld":{
+        "format": "<span></span>",
+        "tooltip":false
+    },
+    "custom/rd":{
+        "format": "<span></span>",
+        "tooltip":false
+    },
+    "custom/archlogo":{
+        "format": "<span color=\"#1f75fe\">   </span>",
+        "tooltip":false
+    },
+    "custom/ar":{
+        "format": "<span color=\"#555555\"></span>",
+        "tooltip":false
+    },
+    "hyprland/workspaces": {
+        "active-only": false,
+        "disable-scroll": true,
+        "on-scroll-up": "hyprctl dispatch workspace r-1",
+        "on-scroll-down": "hyprctl dispatch workspace r+1",
+        "persistent-workspaces": {
+            "*": 1,
+            "*": 2,
+            "*": 3,
+            "*": 4,
+            "*": 5,
+            "*": 6,
+            "*": 7,
+            "*": 8,
+            "*": 9,
+            "*": 10
+        },
+        "format": "{icon}",
+        "format-icons": {
+            "1": "<span font-family=\"Font Awesome 6 Free Solid\"></span>",
+            "2": "<span font-family=\"Font Awesome 6 Brands\">\ue007</span>",
+            "3": "<span font-family=\"Font Awesome 6 Free Solid\"></span>",
+            "4": "",
+            "5": "<span font-family=\"Font Awesome 6 Free Solid\"></span>",
+            "6": "<span font-family=\"Font Awesome 6 Brands\"></span>",
+            "7": "<span font-family=\"Font Awesome 6 Brands\"></span>",
+            "8": "<span font-family=\"Font Awesome 6 Brands\"></span>",
+            // "8": "<span style=\"font-size:16px;\">\uf313</span>",
+            "9": "<span font-family=\"Font Awesome 6 Free Solid\">\uf0a0</span>",
+            "10":"",
+// # bspc monitor -d          
+//                  p    
+         //"urgent": "",
+         //"active": "",
+         "default": ""
+        }
+
+/*         "format-icons": { */
+         /*    "1": "道", */
+         /*    "2": "乾", */
+         /*    "3": "坤", */
+         /*    "4": "震", */
+         /*    "5": "巽", */
+         /*    "6": "坎", */
+         /*    "7": "离", */
+         /*    "8": "艮", */
+         /*    "9": "兑", */
+         /*    "10": "吾", */
+         /* //"urgent": "", */
+         /* //"active": "", */
+         /* "default": "" */
+        /* } */
+    },
+    "hyprland/submap":{
+        "format": "[{}]",
+        "default-submap": "-",
+        "always-on": true
+        // "max-length":8,
+        // "tooltip":true
+    },
+//    
+"hyprland/window": {
+    "format": " \uf7d6 {initialTitle:40}",
+    "rewrite": {
+        "(.*) — Mozilla Firefox": "\ue007 $1",
+        "(.*) - zsh": "> [$1]"
+    },
+    "separate-outputs": true
+},
+"mpd": {
+    "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+    "format-disconnected": "Disconnected ",
+    "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+    "unknown-tag": "N/A",
+    "interval": 5,
+    "consume-icons": {
+        "on": " "
+    },
+    "random-icons": {
+        "off": "<span color=\"#f53c3c\"></span> ",
+        "on": " "
+    },
+    "repeat-icons": {
+        "on": " "
+    },
+    "single-icons": {
+        "on": "1 "
+    },
+    "state-icons": {
+        "paused": "",
+        "playing": ""
+    },
+    "tooltip-format": "MPD (connected)",
+    "tooltip-format-disconnected": "MPD (disconnected)"
+},
+"idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+        "activated": "",
+        "deactivated": ""
+    }
+},
+"tray": {
+        // "icon-size": 11,
+        "spacing": 10
+},
+"clock": {
+        // "timezone": "America/New_York",
+    // "format":" {:%Y-%m-%d %H:%M:%S}",
+    "format":"<span font-family=\"Font Awesome 6 Free Solid\"></span> {:%H:%M}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": " {:%Y-%m-%d}"
+},
+"cpu": {
+    "interval":2,
+    "format": " {usage}%",
+    "tooltip": true
+},
+// 
+"memory": {
+    "interval":2,
+    "format": "\uf538 {}%"
+},
+"temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        // "format-critical": "{temperatureC}°C {icon}",
+        "critical-threshold": 80,
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": ["", "", ""]
+},
+"backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+},
+"battery": {
+    "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+    },
+    "format": "{icon} {capacity}%[$]",
+    "format-full": "{icon} {capacity}%[@]",
+    "format-charging": " {capacity}%[#]",
+    "format-plugged": " {capacity}%[&]",
+    "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+},
+"battery#bat2": {
+    "bat": "BAT2"
+},
+"power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+        "default": "",
+        "performance": "",
+        "balanced": "",
+        "power-saver": ""
+    }
+},
+"network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        //"format-wifi": "  {essid} ({signalStrength}%)",
+        // "format-ethernet": " {ipaddr}/{cidr}",
+        "interval":1,
+        "format-wifi": " {bandwidthDownBytes}  {bandwidthUpBytes}",
+        "format-ethernet": " {bandwidthDownBytes}  {bandwidthUpBytes}",
+        // "format-ethernet": " {ipaddr}/{cidr}",
+        "tooltip-format": "\uf6ff {ifname} via {gwaddr}",
+        "format-linked": " {ifname} (No IP)",
+        "format-disconnected": "⚠ Disconnected",
+        "format-alt": "\uf6ff {ifname}: {ipaddr}/{cidr}"
+},
+"pulseaudio": {
+    "scroll-step": 5, // %, can be a float
+    "format": "{icon}{volume}%",
+    "format-bluetooth": "{icon} {volume}%",
+    "format-bluetooth-muted": " {icon}",
+    "format-muted": " {volume}%",
+    "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": [" ", " ", " "]
+    },
+    "on-click": "pavucontrol"
+},
+"custom/media": {
+    "format": "{icon} {}",
+    "return-type": "json",
+    "max-length": 40,
+    "format-icons": {
+        "spotify": "",
+        "default": "🎜"
+    },
+    "escape": true,
+    "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+}
+}

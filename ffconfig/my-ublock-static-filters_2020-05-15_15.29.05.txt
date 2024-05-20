@@ -1,0 +1,7 @@
+! 5/15/2020 https://blog.csdn.net
+blog.csdn.net##.advert-a
+
+! 5/15/2020 https://www.zhihu.com
+www.zhihu.com##.Pc-feedAd-container
+www.zhihu.com##div.Card.Pc-card
+www.zhihu.com##.css-520aav

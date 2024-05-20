@@ -1,0 +1,241 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family:"Sarasa Mono CL Semibold","Font Awesome 6 Free","Hack Nerd Font";
+    font-size: 15px;
+    animation-timing-function: steps(12);
+    animation-duration: 3.0s;
+    min-height:0;
+    font-style:normal;
+    /* font-weight:normal; */
+}
+
+window#waybar {
+    background-color: #1b1d1e;
+    /*background-color: transparent;*/
+    /*border-bottom: 3px solid rgba(100, 114, 125, 0.5);*/
+    border:none;
+    color: #00ddff;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    /* opacity: 0.2; */
+}
+
+window#waybar.empty {
+    /*background-color: transparent;*/
+    /*color: transparent;*/
+}
+
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    /*box-shadow: inset 0 -3px transparent;*/
+    /* Avoid rounded borders under each button name */
+    /*box-shadow: inset 0 -3px transparent; */
+    /* font-family:"Font Awesome 6 Free"; */
+    border: none;
+    border-radius:0px;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+    box-shadow: inherit;
+    text-shadow: inherit;
+    border:none;
+    transition: none; /* Disable predefined animations */
+}
+
+/* you can set a style on hover for any module like this */
+#pulseaudio:hover {
+    background-color: #932fff;
+    color: #1b1d1e;
+}
+
+#workspaces button {
+    padding: 0 7px;
+    /* padding:0 0; */
+    background-color: #1b1d1e;
+    color: #d7005f;
+}
+
+#workspaces button.empty {
+    color: #555555;
+}
+
+#workspaces button:hover {
+    background: #d7005f;
+    color:#1b1d1e;
+}
+
+/*#workspaces button.focused {*/
+#workspaces button.active {
+    color: #00ddff;
+    background-color: #292929;
+    /*box-shadow: inset 0 -3px #ffffff;*/
+}
+
+#workspaces button.urgent {
+    color: #1b1d1e;
+    background-color: #d7005f;
+}
+
+#mode {
+    background-color: #64727D;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#custom{
+    /* background-color: transparent; */
+}
+
+#custom-archlogo{
+    font-family:"Hack Nerd Font";
+    font-size:17px;
+}
+
+#custom-lu,
+#custom-ru,
+#custom-ld,
+#custom-rd {
+    /*color: transparent;*/
+    font-size:27px;
+    color: #1b1d1e;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#network,
+#pulseaudio,
+#tray,
+#mode,
+#mpd {
+    padding: 0 8px;
+    color: #bcbcbc;
+}
+
+#window,
+#workspaces {
+    /* margin:0 0; */
+    /* padding:0 0px; */
+    background-color:#1b1d1e;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#clock {
+    color: #1f75fe;
+}
+
+#battery {
+    color: #00d7af;
+}
+
+#battery.charging, #battery.plugged {
+    color: #00d7af;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+label:focus {
+    background-color: #000000;
+}
+
+#cpu {
+    color: #ffd000;
+}
+
+#memory {
+    color: #ff8700;
+}
+#network {
+    color: #44ff00;
+}
+
+#network.disconnected {
+    color: #44ff00;
+}
+
+#pulseaudio {
+    color: #932fff;
+}
+
+#pulseaudio.muted {
+    color: #af5fff;
+}
+
+#temperature {
+    color: #d40000;
+}
+
+#temperature.critical {
+    color: #d40000;
+}
+
+#tray {
+    color: #2980b9;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
+
+#mpd {
+    background-color: #66cc99;
+    color: #2a5c45;
+}
+
+#mpd.disconnected {
+    background-color: #f53c3c;
+}
+
+#mpd.stopped {
+    background-color: #90b1b1;
+}
+
+#mpd.paused {
+    background-color: #51a37a;
+}
+
+tooltip {
+    background: rgba(27, 29, 30, 0.8);
+    border: 1px solid rgba(85, 85, 85, 0.8);
+}
+tooltip label {
+    color: #ffffff;
+}
+

@@ -1,0 +1,76 @@
+# my style
+
+BasedOnStyle: LLVM
+Standard: c++11
+
+# Indent
+IndentWidth: 4
+ColumnLimit: 80
+# UseTab: false
+# IndentCaseLabels: true
+PointerAlignment: Left
+AccessModifierOffset: -4
+AlignOperands: true
+AlignAfterOpenBracket: Align
+AlignConsecutiveAssignments: true
+
+# Space
+SpaceInEmptyBlock: true
+SpaceAfterTemplateKeyword: false
+
+# Break
+AllowShortBlocksOnASingleLine: true
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortEnumsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: true
+AllowShortLambdasOnASingleLine: true
+AllowShortIfStatementsOnASingleLine: true
+AllowShortLoopsOnASingleLine: true
+AlwaysBreakTemplateDeclarations: Yes
+
+BreakBeforeBinaryOperators: All
+
+# BreakBeforeBraces: Stroustrup
+# BreakBeforeBraces: Allman
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterCaseLabel:  true
+  AfterClass:      true
+  AfterControlStatement: true
+  AfterEnum:       false
+  AfterFunction:   true
+  AfterNamespace:  true
+  AfterObjCDeclaration: true
+  AfterStruct:     true
+  AfterUnion:      true
+  AfterExternBlock: true
+  BeforeCatch:     true
+  BeforeElse:      true
+  BeforeLambdaBody: true
+  BeforeWhile: true
+  IndentBraces:    false
+  SplitEmptyFunction: false
+  SplitEmptyRecord: false
+  SplitEmptyNamespace: false
+
+## K&R 
+# BreakBeforeBraces: Custom
+# BraceWrapping:
+#   AfterCaseLabel:  false
+#   AfterClass:      false
+#   AfterControlStatement: false
+#   AfterEnum:       false
+#   AfterFunction:   true
+#   AfterNamespace:  false
+#   AfterObjCDeclaration: false
+#   AfterStruct:     false
+#   AfterUnion:      false
+#   AfterExternBlock: false
+#   BeforeCatch:     false
+#   BeforeElse:      false
+#   IndentBraces:    false
+#   SplitEmptyFunction: false
+#   SplitEmptyRecord: false
+  # SplitEmptyNamespace: false
+
+

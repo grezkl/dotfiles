@@ -1,0 +1,105 @@
+!$HOME/.Xresources
+URxvt.preeditType:Root
+
+URxvt.inputMethod: fcitx5
+URxvt.clipboard.autocopy: true
+
+! URxvt.keysym.M-c: perl:clipboard:copy
+! URxvt.keysym.M-v: perl:clipboard:paste
+
+! 粘贴板设置
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+! Shift/Control 顺序无关
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+
+! 禁用之前的复制粘贴方案
+URxvt.keysym.Control-Meta-c: builtin-string:
+URxvt.keysym.Control-Meta-v: builtin-string:
+
+!font-config
+Xft.autohint: 1
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+
+URxvt.depth: 32
+! URxvt.inheritPixmap:true
+!!URL操作
+URxvt.urlLauncher: firefox
+URxvt.matcher.button: 1
+Urxvt.perl-ext-common: matcher
+!!滚动条设置
+URxvt.scrollBar: False
+URxvt.scrollBar_floating: False
+URxvt.scrollstyle: plain
+!!滚屏设置
+URxvt.mouseWheelScrollPage: True
+URxvt.scrollTtyOutput: False
+URxvt.scrollWithBuffer: True
+URxvt.scrollTtyKeypress: True
+!!光标闪烁
+URxvt.cursorBlink: false
+URxvt.saveLines: 3000
+!!边框
+URxvt.borderLess: False
+!!字体设置
+!Xft.dpi: 141
+Xft.dpi: 192
+!Xft.dpi: 282
+! URxvt.letterSpace: -1
+
+!URxvt.font: xft:xos4 Terminus:size=12,xft:WenQuanYi WenQuanYi Bitmap Song:size=12,xft:TerminessTTF Nerd Font Mono:size=12
+!URxvt.boldfont: xft:xos4 Terminus:size=12,xft:WenQuanYi WenQuanYi Bitmap Song:size=12,xft:TerminessTTF Nerd Font Mono:size=12
+
+URxvt.font: xft:xos4 Terminus:size=12,xft:WenQuanYi WenQuanYi Bitmap Song:size=12,xft:Terminess Nerd Font Mono:size=12
+URxvt.boldfont: xft:xos4 Terminus:size=12,xft:WenQuanYi WenQuanYi Bitmap Song:size=12,xft:Terminess Nerd Font Mono:size=12
+
+URxvt.background:   [70]#060404
+URxvt.foreground:       #c0c0c0
+URxvt.color12 : #1f75fe
+
+bar-background:     #1a1a1a
+! alert:              #ffddff
+
+! [private][archive] molokai-like theme
+! color0:         #1b1d1e
+! color1:         #d7005f
+! color2:         #44ff00
+! color3:         #f67400
+! color4:         #1f75fe
+! color5:         #932fff
+! color6:         #00bbff
+! color7:         #bbbbbb
+! color8:         #555555
+! color9:         #cd0000
+! color10:        #00ff00
+! color11:        #ffd000
+! color12:        #0087ff
+! color13:        #cd00cd
+! color14:        #00ddff
+! color15:        #ffffff
+
+color0:     #1b1d1e
+color1:     #d7005f
+color2:     #44ff00
+color3:     #ff8700
+color4:     #1f75fe
+color5:     #932fff
+color6:     #00d7af
+color7:     #bcbcbc
+color8:     #555555
+color9:     #d40000
+color10:    #87ff00
+color11:    #ffd000
+color12:    #0087ff
+color13:    #af5fff
+color14:    #00ddff
+color15:    #ffffff
+
+Xcursor.theme: Breeze5
+! Xcursor.size: 24

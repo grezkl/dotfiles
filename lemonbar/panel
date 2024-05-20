@@ -1,0 +1,58 @@
+#! /bin/sh
+
+PANEL_FIFO=/tmp/panel-fifo
+PANEL_WM_NAME=bspwm_panel
+PANEL_HEIGHT=30
+PANEL_FONT="Sarasa Mono CL:style=Semibold:size=10"
+ICON1="Font Awesome 5 Free::size=12"
+ICON2="Font Awesome 5 Brands:size=12"
+ICON3="Font Awesome 5 Free Solid:size=12"
+PANEL_FG="#D7005F"
+PANEL_BG="#1a1a1a"
+
+if xdo id -a "$PANEL_WM_NAME" > /dev/null ; then
+    printf "%s\n" "The panel is already running." >&2
+    exit 1
+fi
+
+trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
+
+[ -e "$PANEL_FIFO" ] && rm "$PANEL_FIFO"
+mkfifo "$PANEL_FIFO"
+
+bspc subscribe report > "$PANEL_FIFO" &
+
+# echo "T$(xdotool getwindowfocus getwindowname)" > "$PANEL_FIFO" &
+xtitle -sf 'T%s\n' > "$PANEL_FIFO" &
+
+S=""
+# volume cpu mem temp bat time
+while true
+do
+    echo "V  $(amixer get Master | tail -n1 |  sed -r "s/.*\[(.*)%\].*/\1/")%"
+    echo "C $S  $(top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk '{print 100 - $1"%"}')"
+    echo "M $S  $(free -h | awk '/Mem:/ {print $3}' | tr -d 'i')"
+    printf "P $S  +%s°C\n" $(echo "$(cat /sys/class/thermal/thermal_zone0/temp) / 1000" | bc)
+    echo "B $S  $(cat /sys/class/power_supply/BAT0/capacity)%"
+    echo "D $S  $(date +"%a %F %R") "
+
+#     vol=$(amixer get Master | tail -n1 |  sed -r "s/.*\[(.*)%\].*/\1/")%
+    # cpu=$(top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk '{print 100 - $1"%"}')
+    # mem=$(free -h | awk '/Mem:/ {print $3}' | tr -d 'i')
+    # temp=$(echo "$(cat /sys/class/thermal/thermal_zone0/temp) / 1000" | bc)
+    # bat=$(acpi -b | awk '{ print $4 " " $5 }' | tr -d ',')
+    # time=$(date +"%a %F %R")
+    # S="  "
+
+    # printf "S %s%s  %s%s  %s%s  %s%s  %s%s  %s%s " "$vol" "$S" "$cpu" "$S" "$mem" "$S" "$temp" "$S" "$temp" "S" "$bat" "$S" "$time" "$S"
+    sleep 1
+done > "$PANEL_FIFO" &
+
+# . panel_colors
+
+./panel_bar < "$PANEL_FIFO" | lemonbar -a 32 -u 2 -n "$PANEL_WM_NAME" -gx$PANEL_HEIGHT -f "$PANEL_FONT" -f "$ICON1" -f "$ICON2" -f "$ICON3" -F "$PANEL_FG" -B "$PANEL_BG" | sh &
+
+wid=$(xdo id -m -a "$PANEL_WM_NAME")
+xdo above -t "$(xdo id -N Bspwm -n root | sort | head -n 1)" "$wid"
+
+wait
