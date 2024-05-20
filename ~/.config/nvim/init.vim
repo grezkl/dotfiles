@@ -1,1 +1,0 @@
-/home/greanoia/.dotfiles/vim/init.vim

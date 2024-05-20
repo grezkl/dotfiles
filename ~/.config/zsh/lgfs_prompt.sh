@@ -1,1 +1,0 @@
-/home/greanoia/.dotfiles/zsh/lgfs_prompt.sh

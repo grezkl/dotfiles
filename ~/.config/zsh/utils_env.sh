@@ -1,1 +1,0 @@
-/home/greanoia/.dotfiles/zsh/utils_env.sh
