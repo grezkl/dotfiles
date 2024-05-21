@@ -1,0 +1,10 @@
+[Unit]
+Description=Timeline of Snapper Snapshots
+Documentation=man:snapper(8) man:snapper-configs(5)
+
+[Timer]
+OnCalendar=00/3:00  # 每3小时创建一次快照
+
+[Install]
+WantedBy=timers.target
+

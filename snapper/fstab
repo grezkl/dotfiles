@@ -1,0 +1,16 @@
+# /dev/nvme0n1p3 LABEL=ar6spmk
+UUID=64743601-adc8-4e53-9274-667044a61ef5	/         	btrfs     	rw,relatime,compress=zstd:3,ssd,discard=async,space_cache=v2,subvolid=256,subvol=/@	0 0
+
+# /dev/nvme0n1p3 LABEL=ar6spmk
+UUID=64743601-adc8-4e53-9274-667044a61ef5	/home     	btrfs     	rw,relatime,compress=zstd:3,ssd,discard=async,space_cache=v2,subvolid=257,subvol=/@home	0 0
+
+# /dev/nvme0n1p3 LABEL=ar6spmk
+UUID=64743601-adc8-4e53-9274-667044a61ef5	/.snapshots     btrfs     	rw,relatime,compress=zstd:3,ssd,discard=async,space_cache=v2,subvolid=267,subvol=/@snapshots	0 0
+
+
+# /dev/nvme0n1p1
+UUID=77E4-A206      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
+
+# /dev/nvme0n1p2
+UUID=5a266769-f3c6-4181-81cc-81aae51766fc	none      	swap      	defaults  	0 0
+
