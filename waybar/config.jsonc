@@ -135,7 +135,7 @@
     // "format":" {:%Y-%m-%d %H:%M:%S}",
     "format":"<span font-family=\"Font Awesome 6 Free Solid\"></span> {:%H:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "<span font-family=\"Font Awesome 6 Free Solid\"> {:%Y-%m-%d}</span>"
+    "format-alt": "<span font-family=\"Font Awesome 6 Free Solid\"></span> {:%Y-%m-%d}"
 },
 "cpu": {
     "interval":2,
