@@ -139,19 +139,23 @@
     "format-alt": "<span font-family=\"Font Awesome 6 Free Solid\"></span> {:%Y-%m-%d}"
 },
 "cpu": {
-    "interval":2,
+    "interval":5,
     "format": " {usage}%",
     "tooltip": true
 },
 // 
 "memory": {
-    "interval":2,
-    "format": "\uf538 {}%"
+    "interval":5,
+    "format": "\uf538 {}%",
+    "format-alt": "\uf538 {swapUsed:0.1f}G[swap]",
+    // "tooltip": true,
+    // "tooltip-format": "\uf538 {}%"
 },
 "temperature": {
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         // "format-critical": "{temperatureC}°C {icon}",
+        // "interval":10,
         "critical-threshold": 80,
         "format": "{icon} {temperatureC}°C",
         "format-icons": ["", "", ""]
