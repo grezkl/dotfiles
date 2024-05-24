@@ -93,6 +93,7 @@
         "format": "{icon}",
         "format-icons": {
             "1": "<span font-family=\"Font Awesome 6 Free Solid\"></span>",
+            // "1": "",
             "2": "<span font-family=\"Font Awesome 6 Brands\">\ue007</span>",
             "3": "<span font-family=\"Font Awesome 6 Free Solid\"></span>",
             "4": "",
@@ -102,8 +103,8 @@
             "8": "<span font-family=\"Font Awesome 6 Brands\"></span>",
             "9": "<span font-family=\"Font Awesome 6 Free Solid\">\uf0a0</span>",
             "10":"",
-// # bspc monitor -d          
-//                  p    
+// # bspc monitor -d                  
+// 󰒋                       
          //"urgent": "",
          //"active": "",
          "default": ""
