@@ -2,26 +2,33 @@
 
 path=`pwd`
 xconfig=$HOME/.config
+flocal=$$HOME/.local/share
 
 # alacritty
 mkdir -pv $xconfig/alacritty
 ln -sfv $path/alacritty/alacritty.toml $xconfig/alacritty/alacritty.toml
 
 # bspwm
-mkdir -pv $xconfig/bspwm
-ln -sfv $path/bspwm/bspwmrc $xconfig/bspwm/bspwmrc
-ln -sfv $path/bspwm/sxhkdrc $xconfig/sxhkd/sxhkdrc
+#mkdir -pv $xconfig/bspwm
+#ln -sfv $path/bspwm/bspwmrc $xconfig/bspwm/bspwmrc
+#ln -sfv $path/bspwm/sxhkdrc $xconfig/sxhkd/sxhkdrc
 
 # clang
 ln -sfv $path/clang/clang-format ~/.clang-format
 
 # feh
-ln -sfv $path/pictures/fehbg ~/.fehbg
+#ln -sfv $path/pictures/fehbg ~/.fehbg
 
 # fontconfig
 mkdir -pv $xconfig/fontconfig
 ln -sfv $path/fontconfig/fonts.conf $xconfig/fontconfig/fonts.conf
 ln -sfv $path/fontconfig/10-dpi.conf $xconfig/fontconfig/conf.d/10-dpi.conf
+
+# fcitx5
+mkdir -p flocal/fcitx5/rime
+mkdir -p flocal/fcitx5/themes
+ln -sfv $path/fcitx5/themes $flocal/fcitx5/themes 
+ln -sfv $path/fcitx5/default.custom.yaml $flocal/fcitx5/rime/default.custom.yaml
 
 # hyprland
 mkdir -pv $xconfig/hypr
@@ -30,12 +37,12 @@ ln -sfv $path/hypr/hyprland.conf $xconfig/hypr/hyprland.conf
 # ln -sfv $path/hypr/hypridle.conf $xconfig/hypr
 
 # keynav
-mkdir -pv $xconfig/keynav
-ln -sfv $path/keynav/keynavrc $xconfig/keynav/keynavrc
+#mkdir -pv $xconfig/keynav
+#ln -sfv $path/keynav/keynavrc $xconfig/keynav/keynavrc
 
 # picom(compton)
-mkdir -pv $xconfig/picom
-ln -sfv $path/picom/picom.conf $xconfig/picom/picom.conf
+#mkdir -pv $xconfig/picom
+#ln -sfv $path/picom/picom.conf $xconfig/picom/picom.conf
 
 # waybar
 mkdir -pv $xconfig/waybar
@@ -49,16 +56,16 @@ ln -sfv $path/mpd-ncmpcpp/config $xconfig/ncmpcpp/config
 ln -sfv $path/mpd-ncmpcpp/mpd.conf $xconfig/mpd/mpd.conf
 
 # polybar
-mkdir -pv $xconfig/polybar
-ln -sfv $path/polybar/config $xconfig/polybar/config
+#mkdir -pv $xconfig/polybar
+#ln -sfv $path/polybar/config $xconfig/polybar/config
 
 # ranger
 mkdir -pv $xconfig/ranger
 ln -sfv $path/ranger/rc.conf $xconfig/ranger/rc.conf
 
 # rofi
-mkdir -pv $xconfig/rofi
-ln -sfv $path/rofi/config.rasi $xconfig/rofi/config.rasi
+#mkdir -pv $xconfig/rofi
+#ln -sfv $path/rofi/config.rasi $xconfig/rofi/config.rasi
 # ln -sfv $path/rofi/arc-red-dark.rasi $xconfig/rofi/arc-red-dark.rasi
 
 # termite
