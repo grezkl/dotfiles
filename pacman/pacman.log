@@ -5398,3 +5398,544 @@
 [2024-05-20T23:59:10+0800] [ALPM] running '30-systemd-daemon-reload-user.hook'...
 [2024-05-20T23:59:10+0800] [ALPM] running '30-systemd-tmpfiles.hook'...
 [2024-05-20T23:59:10+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-21T06:16:39+0800] [PACMAN] Running 'pacman -S snapper'
+[2024-05-21T06:16:41+0800] [ALPM] transaction started
+[2024-05-21T06:16:41+0800] [ALPM] installed snapper (0.11.0-1)
+[2024-05-21T06:16:41+0800] [ALPM] transaction completed
+[2024-05-21T06:16:41+0800] [ALPM] running '30-systemd-daemon-reload-system.hook'...
+[2024-05-21T06:16:42+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-21T06:16:42+0800] [ALPM] running 'dbus-reload.hook'...
+[2024-05-21T09:23:34+0800] [PACMAN] Running 'pacman -Rsc snapper'
+[2024-05-21T09:23:35+0800] [ALPM] transaction started
+[2024-05-21T09:23:35+0800] [ALPM] warning: /etc/conf.d/snapper saved as /etc/conf.d/snapper.pacsave
+[2024-05-21T09:23:35+0800] [ALPM] removed snapper (0.11.0-1)
+[2024-05-21T09:23:35+0800] [ALPM] transaction completed
+[2024-05-21T09:23:35+0800] [ALPM] running '30-systemd-daemon-reload-system.hook'...
+[2024-05-21T09:23:35+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-21T09:23:35+0800] [ALPM] running 'dbus-reload.hook'...
+[2024-05-21T09:23:45+0800] [PACMAN] Running 'pacman -S snapper'
+[2024-05-21T09:23:46+0800] [ALPM] transaction started
+[2024-05-21T09:23:46+0800] [ALPM] installed snapper (0.11.0-1)
+[2024-05-21T09:23:46+0800] [ALPM] transaction completed
+[2024-05-21T09:23:46+0800] [ALPM] running '30-systemd-daemon-reload-system.hook'...
+[2024-05-21T09:23:46+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-21T09:23:46+0800] [ALPM] running 'dbus-reload.hook'...
+[2024-05-21T09:35:12+0800] [PACMAN] Running 'pacman -S snapper'
+[2024-05-21T09:35:13+0800] [ALPM] transaction started
+[2024-05-21T09:35:13+0800] [ALPM] reinstalled snapper (0.11.0-1)
+[2024-05-21T09:35:13+0800] [ALPM] transaction completed
+[2024-05-21T09:35:13+0800] [ALPM] running '30-systemd-daemon-reload-system.hook'...
+[2024-05-21T09:35:13+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-21T09:35:13+0800] [ALPM] running 'dbus-reload.hook'...
+[2024-05-21T09:35:26+0800] [PACMAN] Running 'pacman -Rsc snapper'
+[2024-05-21T09:35:26+0800] [ALPM] transaction started
+[2024-05-21T09:35:26+0800] [ALPM] warning: /etc/conf.d/snapper saved as /etc/conf.d/snapper.pacsave
+[2024-05-21T09:35:26+0800] [ALPM] removed snapper (0.11.0-1)
+[2024-05-21T09:35:26+0800] [ALPM] transaction completed
+[2024-05-21T09:35:26+0800] [ALPM] running '30-systemd-daemon-reload-system.hook'...
+[2024-05-21T09:35:26+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-21T09:35:27+0800] [ALPM] running 'dbus-reload.hook'...
+[2024-05-21T14:10:51+0800] [PACMAN] Running 'pacman -S snapper'
+[2024-05-21T14:10:51+0800] [ALPM] transaction started
+[2024-05-21T14:10:51+0800] [ALPM] installed snapper (0.11.0-1)
+[2024-05-21T14:10:52+0800] [ALPM] transaction completed
+[2024-05-21T14:10:52+0800] [ALPM] running '30-systemd-daemon-reload-system.hook'...
+[2024-05-21T14:10:52+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-21T14:10:52+0800] [ALPM] running 'dbus-reload.hook'...
+[2024-05-21T14:44:20+0800] [PACMAN] Running 'pacman -S fastfetch'
+[2024-05-21T14:44:22+0800] [ALPM] transaction started
+[2024-05-21T14:44:22+0800] [ALPM] installed yyjson (0.9.0-3)
+[2024-05-21T14:44:22+0800] [ALPM] installed fastfetch (2.12.0-1)
+[2024-05-21T14:44:22+0800] [ALPM] transaction completed
+[2024-05-21T14:44:22+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-21T14:46:10+0800] [PACMAN] Running 'pacman -Rsc fastfetch'
+[2024-05-21T14:46:11+0800] [ALPM] transaction started
+[2024-05-21T14:46:11+0800] [ALPM] removed fastfetch (2.12.0-1)
+[2024-05-21T14:46:11+0800] [ALPM] removed yyjson (0.9.0-3)
+[2024-05-21T14:46:11+0800] [ALPM] transaction completed
+[2024-05-21T14:46:11+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-21T14:46:14+0800] [PACMAN] Running 'pacman -S yu'
+[2024-05-21T14:46:17+0800] [PACMAN] Running 'pacman -Syu'
+[2024-05-21T14:46:17+0800] [PACMAN] synchronizing package lists
+[2024-05-21T14:46:19+0800] [PACMAN] starting full system upgrade
+[2024-05-21T14:46:22+0800] [ALPM] transaction started
+[2024-05-21T14:46:22+0800] [ALPM] upgraded device-mapper (2.03.23-3 -> 2.03.24-1)
+[2024-05-21T14:46:22+0800] [ALPM] upgraded jasper (4.2.1-1 -> 4.2.4-1)
+[2024-05-21T14:46:22+0800] [ALPM] upgraded libass (0.17.1-4 -> 0.17.2-1)
+[2024-05-21T14:46:22+0800] [ALPM] upgraded liburing (2.6-1 -> 2.6-2)
+[2024-05-21T14:46:22+0800] [ALPM] upgraded lua51-lpeg (1.1.0-1 -> 1.1.0-2)
+[2024-05-21T14:46:22+0800] [ALPM] upgraded pcsclite (2.2.1-1 -> 2.2.2-1)
+[2024-05-21T14:46:22+0800] [ALPM] upgraded python-trove-classifiers (2024.4.10-1 -> 2024.5.17-1)
+[2024-05-21T14:46:22+0800] [ALPM] upgraded svt-av1 (2.0.0-1 -> 2.1.0-1)
+[2024-05-21T14:46:22+0800] [ALPM] upgraded v2ray-geoip (202405090040-1 -> 202405160040-1)
+[2024-05-21T14:46:22+0800] [ALPM] upgraded vapoursynth (R66-2 -> R68-1)
+[2024-05-21T14:46:22+0800] [ALPM] transaction completed
+[2024-05-21T14:46:22+0800] [ALPM] running '30-systemd-daemon-reload-system.hook'...
+[2024-05-21T14:46:23+0800] [ALPM] running '30-systemd-udev-reload.hook'...
+[2024-05-21T14:46:23+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-21T14:46:23+0800] [ALPM] running '30-update-mime-database.hook'...
+[2024-05-21T14:46:24+0800] [ALPM] running '90-mkinitcpio-install.hook'...
+[2024-05-21T14:46:24+0800] [ALPM-SCRIPTLET] ==> Building image from preset: /etc/mkinitcpio.d/linux.preset: 'default'
+[2024-05-21T14:46:24+0800] [ALPM-SCRIPTLET] ==> Using default configuration file: '/etc/mkinitcpio.conf'
+[2024-05-21T14:46:24+0800] [ALPM-SCRIPTLET]   -> -k /boot/vmlinuz-linux -g /boot/initramfs-linux.img
+[2024-05-21T14:46:24+0800] [ALPM-SCRIPTLET] ==> Starting build: '6.9.1-arch1-1'
+[2024-05-21T14:46:24+0800] [ALPM-SCRIPTLET]   -> Running build hook: [base]
+[2024-05-21T14:46:24+0800] [ALPM-SCRIPTLET]   -> Running build hook: [udev]
+[2024-05-21T14:46:24+0800] [ALPM-SCRIPTLET]   -> Running build hook: [autodetect]
+[2024-05-21T14:46:24+0800] [ALPM-SCRIPTLET]   -> Running build hook: [microcode]
+[2024-05-21T14:46:24+0800] [ALPM-SCRIPTLET]   -> Running build hook: [modconf]
+[2024-05-21T14:46:24+0800] [ALPM-SCRIPTLET]   -> Running build hook: [kms]
+[2024-05-21T14:46:27+0800] [ALPM-SCRIPTLET]   -> Running build hook: [keyboard]
+[2024-05-21T14:46:27+0800] [ALPM-SCRIPTLET] ==> WARNING: Possibly missing firmware for module: 'xhci_pci'
+[2024-05-21T14:46:27+0800] [ALPM-SCRIPTLET]   -> Running build hook: [keymap]
+[2024-05-21T14:46:27+0800] [ALPM-SCRIPTLET]   -> Running build hook: [consolefont]
+[2024-05-21T14:46:27+0800] [ALPM-SCRIPTLET] ==> WARNING: consolefont: no font found in configuration
+[2024-05-21T14:46:27+0800] [ALPM-SCRIPTLET]   -> Running build hook: [block]
+[2024-05-21T14:46:27+0800] [ALPM-SCRIPTLET]   -> Running build hook: [filesystems]
+[2024-05-21T14:46:27+0800] [ALPM-SCRIPTLET]   -> Running build hook: [fsck]
+[2024-05-21T14:46:27+0800] [ALPM-SCRIPTLET] ==> Generating module dependencies
+[2024-05-21T14:46:27+0800] [ALPM-SCRIPTLET] ==> Creating zstd-compressed initcpio image: '/boot/initramfs-linux.img'
+[2024-05-21T14:46:27+0800] [ALPM-SCRIPTLET]   -> Early uncompressed CPIO image generation successful
+[2024-05-21T14:46:28+0800] [ALPM-SCRIPTLET] ==> Initcpio image generation successful
+[2024-05-21T14:46:28+0800] [ALPM-SCRIPTLET] ==> Building image from preset: /etc/mkinitcpio.d/linux.preset: 'fallback'
+[2024-05-21T14:46:28+0800] [ALPM-SCRIPTLET] ==> Using default configuration file: '/etc/mkinitcpio.conf'
+[2024-05-21T14:46:28+0800] [ALPM-SCRIPTLET]   -> -k /boot/vmlinuz-linux -g /boot/initramfs-linux-fallback.img -S autodetect
+[2024-05-21T14:46:28+0800] [ALPM-SCRIPTLET] ==> Starting build: '6.9.1-arch1-1'
+[2024-05-21T14:46:28+0800] [ALPM-SCRIPTLET]   -> Running build hook: [base]
+[2024-05-21T14:46:28+0800] [ALPM-SCRIPTLET]   -> Running build hook: [udev]
+[2024-05-21T14:46:28+0800] [ALPM-SCRIPTLET]   -> Running build hook: [microcode]
+[2024-05-21T14:46:28+0800] [ALPM-SCRIPTLET]   -> Running build hook: [modconf]
+[2024-05-21T14:46:28+0800] [ALPM-SCRIPTLET]   -> Running build hook: [kms]
+[2024-05-21T14:46:30+0800] [ALPM-SCRIPTLET] ==> WARNING: Possibly missing firmware for module: 'ast'
+[2024-05-21T14:46:34+0800] [ALPM-SCRIPTLET]   -> Running build hook: [keyboard]
+[2024-05-21T14:46:34+0800] [ALPM-SCRIPTLET] ==> WARNING: Possibly missing firmware for module: 'xhci_pci'
+[2024-05-21T14:46:34+0800] [ALPM-SCRIPTLET]   -> Running build hook: [keymap]
+[2024-05-21T14:46:34+0800] [ALPM-SCRIPTLET]   -> Running build hook: [consolefont]
+[2024-05-21T14:46:34+0800] [ALPM-SCRIPTLET] ==> WARNING: consolefont: no font found in configuration
+[2024-05-21T14:46:34+0800] [ALPM-SCRIPTLET]   -> Running build hook: [block]
+[2024-05-21T14:46:35+0800] [ALPM-SCRIPTLET] ==> WARNING: Possibly missing firmware for module: 'aic94xx'
+[2024-05-21T14:46:35+0800] [ALPM-SCRIPTLET] ==> WARNING: Possibly missing firmware for module: 'bfa'
+[2024-05-21T14:46:35+0800] [ALPM-SCRIPTLET] ==> WARNING: Possibly missing firmware for module: 'qed'
+[2024-05-21T14:46:35+0800] [ALPM-SCRIPTLET] ==> WARNING: Possibly missing firmware for module: 'qla1280'
+[2024-05-21T14:46:35+0800] [ALPM-SCRIPTLET] ==> WARNING: Possibly missing firmware for module: 'qla2xxx'
+[2024-05-21T14:46:35+0800] [ALPM-SCRIPTLET] ==> WARNING: Possibly missing firmware for module: 'wd719x'
+[2024-05-21T14:46:36+0800] [ALPM-SCRIPTLET]   -> Running build hook: [filesystems]
+[2024-05-21T14:46:37+0800] [ALPM-SCRIPTLET]   -> Running build hook: [fsck]
+[2024-05-21T14:46:38+0800] [ALPM-SCRIPTLET] ==> Generating module dependencies
+[2024-05-21T14:46:38+0800] [ALPM-SCRIPTLET] ==> Creating zstd-compressed initcpio image: '/boot/initramfs-linux-fallback.img'
+[2024-05-21T14:46:39+0800] [ALPM-SCRIPTLET]   -> Early uncompressed CPIO image generation successful
+[2024-05-21T14:46:40+0800] [ALPM-SCRIPTLET] ==> Initcpio image generation successful
+[2024-05-21T15:18:31+0800] [PACMAN] Running 'pacman -S cowsay fortune'
+[2024-05-21T15:18:37+0800] [PACMAN] Running 'pacman -S cowsay'
+[2024-05-21T15:18:39+0800] [ALPM] transaction started
+[2024-05-21T15:18:39+0800] [ALPM] installed cowsay (3.04-5)
+[2024-05-21T15:18:39+0800] [ALPM] transaction completed
+[2024-05-21T15:18:39+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-21T15:19:00+0800] [PACMAN] Running 'pacman -S cowfortune'
+[2024-05-21T15:50:35+0800] [PACMAN] Running 'pacman -Rsc ttf-mononoki-nerd'
+[2024-05-21T15:50:36+0800] [ALPM] transaction started
+[2024-05-21T15:50:36+0800] [ALPM] removed ttf-mononoki-nerd (3.2.1-2)
+[2024-05-21T15:50:36+0800] [ALPM] transaction completed
+[2024-05-21T15:50:36+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-21T15:50:36+0800] [ALPM] running 'fontconfig.hook'...
+[2024-05-21T15:50:36+0800] [ALPM] running 'xorg-mkfontscale.hook'...
+[2024-05-21T21:07:05+0800] [PACMAN] Running 'pacman -Syu'
+[2024-05-21T21:07:05+0800] [PACMAN] synchronizing package lists
+[2024-05-21T21:07:07+0800] [PACMAN] starting full system upgrade
+[2024-05-21T21:07:10+0800] [ALPM] transaction started
+[2024-05-21T21:07:10+0800] [ALPM] upgraded archlinux-keyring (20240429-1 -> 20240520-1)
+[2024-05-21T21:07:10+0800] [ALPM-SCRIPTLET] ==> Appending keys from archlinux.gpg...
+[2024-05-21T21:07:13+0800] [ALPM-SCRIPTLET] gpg: public key CF66D153D884358F is 16 seconds newer than the signature
+[2024-05-21T21:07:13+0800] [ALPM-SCRIPTLET] ==> Disabling revoked keys in keyring...
+[2024-05-21T21:07:13+0800] [ALPM-SCRIPTLET]   -> Disabled 1 key.
+[2024-05-21T21:07:13+0800] [ALPM-SCRIPTLET] ==> Updating trust database...
+[2024-05-21T21:07:13+0800] [ALPM-SCRIPTLET] gpg: Note: third-party key signatures using the SHA1 algorithm are rejected
+[2024-05-21T21:07:13+0800] [ALPM-SCRIPTLET] gpg: (use option "--allow-weak-key-signatures" to override)
+[2024-05-21T21:07:14+0800] [ALPM-SCRIPTLET] gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+[2024-05-21T21:07:14+0800] [ALPM-SCRIPTLET] gpg: public key CF66D153D884358F is 16 seconds newer than the signature
+[2024-05-21T21:07:14+0800] [ALPM-SCRIPTLET] gpg: depth: 0  valid:   1  signed:  50  trust: 0-, 0q, 0n, 0m, 0f, 1u
+[2024-05-21T21:07:14+0800] [ALPM-SCRIPTLET] gpg: depth: 1  valid:  50  signed:  98  trust: 0-, 0q, 0n, 50m, 0f, 0u
+[2024-05-21T21:07:14+0800] [ALPM-SCRIPTLET] gpg: depth: 2  valid:  76  signed:  24  trust: 76-, 0q, 0n, 0m, 0f, 0u
+[2024-05-21T21:07:14+0800] [ALPM-SCRIPTLET] gpg: next trustdb check due at 2024-05-28
+[2024-05-21T21:07:14+0800] [ALPM] upgraded iw (6.7-1 -> 6.9-1)
+[2024-05-21T21:07:14+0800] [ALPM] transaction completed
+[2024-05-21T21:07:14+0800] [ALPM] running '30-systemd-daemon-reload-system.hook'...
+[2024-05-21T21:07:15+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-21T21:26:53+0800] [PACMAN] Running 'pacman -S kitty'
+[2024-05-21T21:26:59+0800] [ALPM] transaction started
+[2024-05-21T21:26:59+0800] [ALPM] installed librsync (1:2.3.4-1)
+[2024-05-21T21:26:59+0800] [ALPM] installed kitty-terminfo (0.33.1-4)
+[2024-05-21T21:26:59+0800] [ALPM] installed kitty-shell-integration (0.33.1-4)
+[2024-05-21T21:26:59+0800] [ALPM] installed kitty (0.33.1-4)
+[2024-05-21T21:26:59+0800] [ALPM] transaction completed
+[2024-05-21T21:26:59+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-21T21:26:59+0800] [ALPM] running 'gtk-update-icon-cache.hook'...
+[2024-05-21T21:26:59+0800] [ALPM] running 'update-desktop-database.hook'...
+[2024-05-21T21:32:22+0800] [PACMAN] Running 'pacman -Rsc kitty'
+[2024-05-21T21:32:23+0800] [ALPM] transaction started
+[2024-05-21T21:32:23+0800] [ALPM] removed kitty (0.33.1-4)
+[2024-05-21T21:32:23+0800] [ALPM] removed kitty-terminfo (0.33.1-4)
+[2024-05-21T21:32:23+0800] [ALPM] removed kitty-shell-integration (0.33.1-4)
+[2024-05-21T21:32:23+0800] [ALPM] removed librsync (1:2.3.4-1)
+[2024-05-21T21:32:23+0800] [ALPM] transaction completed
+[2024-05-21T21:32:23+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-21T21:32:23+0800] [ALPM] running 'gtk-update-icon-cache.hook'...
+[2024-05-21T21:32:23+0800] [ALPM] running 'update-desktop-database.hook'...
+[2024-05-21T21:34:36+0800] [PACMAN] Running 'pacman -Rsc libtermkey'
+[2024-05-21T21:34:38+0800] [ALPM] transaction started
+[2024-05-21T21:34:38+0800] [ALPM] removed libtermkey (0.22-3)
+[2024-05-21T21:34:38+0800] [ALPM] transaction completed
+[2024-05-21T21:34:38+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-21T21:34:50+0800] [PACMAN] Running 'pacman -Rsc lua51'
+[2024-05-21T21:34:51+0800] [ALPM] transaction started
+[2024-05-21T21:34:52+0800] [ALPM] removed lua51 (5.1.5-11)
+[2024-05-21T21:34:52+0800] [ALPM] transaction completed
+[2024-05-21T21:34:52+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-22T00:01:17+0800] [PACMAN] Running 'pacman -Syu'
+[2024-05-22T00:01:17+0800] [PACMAN] synchronizing package lists
+[2024-05-22T00:01:20+0800] [PACMAN] starting full system upgrade
+[2024-05-22T08:15:41+0800] [PACMAN] Running 'pacman -Syu'
+[2024-05-22T08:15:41+0800] [PACMAN] synchronizing package lists
+[2024-05-22T08:15:43+0800] [PACMAN] starting full system upgrade
+[2024-05-22T08:16:06+0800] [ALPM] transaction started
+[2024-05-22T08:16:06+0800] [ALPM] upgraded firefox-ublock-origin (1.57.2-1 -> 1.58.0-1)
+[2024-05-22T08:16:06+0800] [ALPM] upgraded llvm-libs (17.0.6-4 -> 17.0.6-5)
+[2024-05-22T08:16:06+0800] [ALPM] upgraded llvm (17.0.6-4 -> 17.0.6-5)
+[2024-05-22T08:16:06+0800] [ALPM] upgraded qt5-base (5.15.13+kde+r145-2 -> 5.15.13+kde+r147-1)
+[2024-05-22T08:16:07+0800] [ALPM] upgraded vim-runtime (9.1.0408-1 -> 9.1.0429-1)
+[2024-05-22T08:16:07+0800] [ALPM] upgraded vim (9.1.0408-1 -> 9.1.0429-1)
+[2024-05-22T08:16:07+0800] [ALPM] transaction completed
+[2024-05-22T08:16:07+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-22T08:16:07+0800] [ALPM] running 'gtk-update-icon-cache.hook'...
+[2024-05-22T08:16:07+0800] [ALPM] running 'update-desktop-database.hook'...
+[2024-05-22T14:03:05+0800] [PACMAN] Running 'pacman -Syu'
+[2024-05-22T14:03:05+0800] [PACMAN] synchronizing package lists
+[2024-05-22T14:03:06+0800] [PACMAN] starting full system upgrade
+[2024-05-22T14:23:05+0800] [PACMAN] Running 'pacman -S -c -c --config /etc/pacman.conf --'
+[2024-05-22T14:23:22+0800] [PACMAN] Running 'pacman -S --needed base-devel'
+[2024-05-22T14:49:43+0800] [PACMAN] Running 'pacman -Rsc wps-office-cn'
+[2024-05-22T14:50:11+0800] [PACMAN] Running 'pacman -S onlyoffice-bin'
+[2024-05-22T14:50:44+0800] [ALPM] transaction started
+[2024-05-22T14:50:44+0800] [ALPM] installed a52dec (0.8.0-2)
+[2024-05-22T14:50:44+0800] [ALPM] installed libmpeg2 (0.5.1-10)
+[2024-05-22T14:50:44+0800] [ALPM] installed gst-plugins-ugly (1.24.3-1)
+[2024-05-22T14:50:44+0800] [ALPM] installed ttf-dejavu (2.37+18+g9b5d1b2f-7)
+[2024-05-22T14:50:44+0800] [ALPM] installed ttf-carlito (20230509-1)
+[2024-05-22T14:50:45+0800] [ALPM] installed onlyoffice-bin (8.0.1-1)
+[2024-05-22T14:50:46+0800] [ALPM] transaction completed
+[2024-05-22T14:50:46+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-22T14:50:46+0800] [ALPM] running '40-fontconfig-config.hook'...
+[2024-05-22T14:50:46+0800] [ALPM] running 'fontconfig.hook'...
+[2024-05-22T14:50:46+0800] [ALPM] running 'gtk-update-icon-cache.hook'...
+[2024-05-22T14:50:46+0800] [ALPM] running 'update-desktop-database.hook'...
+[2024-05-22T14:50:46+0800] [ALPM] running 'xorg-mkfontscale.hook'...
+[2024-05-22T14:50:53+0800] [PACMAN] Running 'pacman -Rsc wps-office-cn'
+[2024-05-22T14:50:54+0800] [ALPM] transaction started
+[2024-05-22T14:50:54+0800] [ALPM] removed wps-office-cn (11.1.0.11719-1)
+[2024-05-22T14:50:54+0800] [ALPM] removed openssl-1.1 (1.1.1.w-1)
+[2024-05-22T14:50:54+0800] [ALPM] transaction completed
+[2024-05-22T14:50:54+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-22T14:50:54+0800] [ALPM] running 'fontconfig.hook'...
+[2024-05-22T14:50:54+0800] [ALPM] running 'gtk-update-icon-cache.hook'...
+[2024-05-22T14:50:54+0800] [ALPM] running 'update-desktop-database.hook'...
+[2024-05-22T14:50:54+0800] [ALPM] running 'xorg-mkfontscale.hook'...
+[2024-05-22T14:51:51+0800] [PACMAN] Running '/usr/bin/pacman -U /home/greanoia/paru/paru-2.0.3-1-x86_64.pkg.tar.zst /home/greanoia/paru/paru-debug-2.0.3-1-x86_64.pkg.tar.zst'
+[2024-05-22T14:51:52+0800] [ALPM] transaction started
+[2024-05-22T14:51:52+0800] [ALPM] installed paru (2.0.3-1)
+[2024-05-22T14:51:52+0800] [ALPM] installed paru-debug (2.0.3-1)
+[2024-05-22T14:51:52+0800] [ALPM] transaction completed
+[2024-05-22T14:51:52+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-22T14:52:06+0800] [PACMAN] Running 'pacman --sync -y -u --'
+[2024-05-22T14:52:06+0800] [PACMAN] synchronizing package lists
+[2024-05-22T14:52:07+0800] [PACMAN] starting full system upgrade
+[2024-05-22T14:52:36+0800] [PACMAN] Running 'pacman --sync --noconfirm -- extra/liblqr extra/libraqm extra/imagemagick extra/optipng extra/gperf'
+[2024-05-22T14:52:38+0800] [ALPM] transaction started
+[2024-05-22T14:52:38+0800] [ALPM] installed liblqr (0.4.2-3)
+[2024-05-22T14:52:38+0800] [ALPM] installed libraqm (0.10.1-1)
+[2024-05-22T14:52:38+0800] [ALPM] installed imagemagick (7.1.1.32-1)
+[2024-05-22T14:52:38+0800] [ALPM] installed optipng (0.7.8-1)
+[2024-05-22T14:52:38+0800] [ALPM] installed gperf (3.1-5)
+[2024-05-22T14:52:38+0800] [ALPM] transaction completed
+[2024-05-22T14:52:38+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-22T14:52:38+0800] [ALPM] running 'detect-old-perl-modules.hook'...
+[2024-05-22T14:52:38+0800] [ALPM] running 'texinfo-install.hook'...
+[2024-05-22T14:52:39+0800] [PACMAN] Running 'pacman --database --asdeps -- liblqr libraqm imagemagick optipng gperf'
+[2024-05-22T14:54:36+0800] [PACMAN] Running 'pacman -Rsc floorp-bin'
+[2024-05-22T14:54:41+0800] [PACMAN] Running 'pacman -Syu'
+[2024-05-22T14:54:41+0800] [PACMAN] synchronizing package lists
+[2024-05-22T14:54:41+0800] [PACMAN] starting full system upgrade
+[2024-05-22T14:54:52+0800] [PACMAN] Running 'pacman -S -y --config /etc/pacman.conf --'
+[2024-05-22T14:54:52+0800] [PACMAN] synchronizing package lists
+[2024-05-22T14:55:00+0800] [PACMAN] Running 'pacman --sync -y -u --'
+[2024-05-22T14:55:00+0800] [PACMAN] synchronizing package lists
+[2024-05-22T14:55:01+0800] [PACMAN] starting full system upgrade
+[2024-05-22T15:07:01+0800] [PACMAN] Running 'pacman --sync -y -u --'
+[2024-05-22T15:07:01+0800] [PACMAN] synchronizing package lists
+[2024-05-22T15:07:02+0800] [PACMAN] starting full system upgrade
+[2024-05-22T15:07:32+0800] [PACMAN] Running 'pacman -S -y --config /etc/pacman.conf --'
+[2024-05-22T15:07:32+0800] [PACMAN] synchronizing package lists
+[2024-05-22T15:07:53+0800] [PACMAN] Running 'pacman -S -c -c --config /etc/pacman.conf --'
+[2024-05-22T15:07:56+0800] [PACMAN] Running 'pacman --sync -y -u --'
+[2024-05-22T15:07:56+0800] [PACMAN] synchronizing package lists
+[2024-05-22T15:07:56+0800] [PACMAN] starting full system upgrade
+[2024-05-22T15:09:37+0800] [PACMAN] Running 'pacman --remove -s -c -- floorp'
+[2024-05-22T15:10:26+0800] [PACMAN] Running 'pacman --remove -s -c -- floorp-bin'
+[2024-05-22T15:10:28+0800] [ALPM] transaction started
+[2024-05-22T15:10:28+0800] [ALPM] removed floorp-bin (11.12.2-2)
+[2024-05-22T15:10:28+0800] [ALPM] removed dbus-glib (0.112-3)
+[2024-05-22T15:10:28+0800] [ALPM] transaction completed
+[2024-05-22T15:10:28+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-22T15:10:28+0800] [ALPM] running 'gtk-update-icon-cache.hook'...
+[2024-05-22T15:10:28+0800] [ALPM] running 'update-desktop-database.hook'...
+[2024-05-22T15:10:34+0800] [PACMAN] Running 'pacman --sync -y -u --'
+[2024-05-22T15:10:34+0800] [PACMAN] synchronizing package lists
+[2024-05-22T15:10:35+0800] [PACMAN] starting full system upgrade
+[2024-05-22T15:11:18+0800] [PACMAN] Running 'pacman --upgrade --noconfirm -- /home/greanoia/.cache/paru/clone/termite/termite-16.9-2-x86_64.pkg.tar.zst'
+[2024-05-22T15:11:18+0800] [ALPM] transaction started
+[2024-05-22T15:11:18+0800] [ALPM] upgraded termite (16.9-1 -> 16.9-2)
+[2024-05-22T15:11:18+0800] [ALPM] transaction completed
+[2024-05-22T15:11:18+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-22T15:11:18+0800] [ALPM] running 'update-desktop-database.hook'...
+[2024-05-22T15:13:50+0800] [PACMAN] Running 'pacman -Rsc gperf'
+[2024-05-22T15:13:51+0800] [ALPM] running 'texinfo-remove.hook'...
+[2024-05-22T15:13:51+0800] [ALPM] transaction started
+[2024-05-22T15:13:51+0800] [ALPM] removed gperf (3.1-5)
+[2024-05-22T15:13:51+0800] [ALPM] transaction completed
+[2024-05-22T15:13:51+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-22T15:13:57+0800] [PACMAN] Running 'pacman -Rsc flutter-engine'
+[2024-05-22T15:14:17+0800] [PACMAN] Running 'pacman -Rsc optipng'
+[2024-05-22T15:14:18+0800] [ALPM] transaction started
+[2024-05-22T15:14:18+0800] [ALPM] removed optipng (0.7.8-1)
+[2024-05-22T15:14:18+0800] [ALPM] transaction completed
+[2024-05-22T15:14:18+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-22T19:16:06+0800] [PACMAN] Running 'pacman -Syu'
+[2024-05-22T19:16:06+0800] [PACMAN] synchronizing package lists
+[2024-05-22T19:16:08+0800] [PACMAN] starting full system upgrade
+[2024-05-22T19:16:10+0800] [ALPM] transaction started
+[2024-05-22T19:16:10+0800] [ALPM] upgraded libjpeg-turbo (3.0.2-2 -> 3.0.3-1)
+[2024-05-22T19:16:10+0800] [ALPM] transaction completed
+[2024-05-22T19:16:10+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-22T21:07:46+0800] [PACMAN] Running 'pacman -S espeakup'
+[2024-05-22T21:07:51+0800] [ALPM] transaction started
+[2024-05-22T21:07:51+0800] [ALPM] installed pcaudiolib (1.2-2)
+[2024-05-22T21:07:51+0800] [ALPM] installed libsonic (0.2.0-1)
+[2024-05-22T21:07:51+0800] [ALPM] installed espeak-ng (1.51.1-2)
+[2024-05-22T21:07:51+0800] [ALPM] installed espeakup (0.90-2)
+[2024-05-22T21:07:51+0800] [ALPM] transaction completed
+[2024-05-22T21:07:51+0800] [ALPM] running '30-systemd-daemon-reload-system.hook'...
+[2024-05-22T21:07:52+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-22T21:16:02+0800] [PACMAN] Running 'pacman -Rsc bspwm sxhkd rofi'
+[2024-05-22T21:16:07+0800] [ALPM] transaction started
+[2024-05-22T21:16:07+0800] [ALPM] removed rofi (1.7.5-2)
+[2024-05-22T21:16:07+0800] [ALPM] removed libxdg-basedir (1.2.3-2)
+[2024-05-22T21:16:07+0800] [ALPM] removed sxhkd (0.6.2-3)
+[2024-05-22T21:16:07+0800] [ALPM] removed bspwm (0.9.10-3)
+[2024-05-22T21:16:07+0800] [ALPM] transaction completed
+[2024-05-22T21:16:07+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-22T21:16:07+0800] [ALPM] running 'gtk-update-icon-cache.hook'...
+[2024-05-22T21:16:08+0800] [ALPM] running 'update-desktop-database.hook'...
+[2024-05-22T21:17:10+0800] [PACMAN] Running 'pacman -Rsc polybar'
+[2024-05-22T21:17:11+0800] [ALPM] transaction started
+[2024-05-22T21:17:11+0800] [ALPM] removed polybar (3.7.1-1)
+[2024-05-22T21:17:11+0800] [ALPM] transaction completed
+[2024-05-22T21:17:11+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-22T21:18:37+0800] [PACMAN] Running 'pacman -Rsc picom keynav-git'
+[2024-05-22T21:18:47+0800] [ALPM] running 'texinfo-remove.hook'...
+[2024-05-22T21:18:47+0800] [ALPM] transaction started
+[2024-05-22T21:18:47+0800] [ALPM] removed keynav-git (0.20220824-1)
+[2024-05-22T21:18:47+0800] [ALPM] removed xdotool (3.20211022.1-1)
+[2024-05-22T21:18:47+0800] [ALPM] removed picom (11.2-1)
+[2024-05-22T21:18:47+0800] [ALPM] removed libconfig (1.7.3-2)
+[2024-05-22T21:18:47+0800] [ALPM] transaction completed
+[2024-05-22T21:18:47+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-22T21:18:47+0800] [ALPM] running 'gtk-update-icon-cache.hook'...
+[2024-05-22T21:18:47+0800] [ALPM] running 'update-desktop-database.hook'...
+[2024-05-22T21:36:34+0800] [PACMAN] Running 'pacman -Rsc obsidian'
+[2024-05-22T21:36:40+0800] [ALPM] transaction started
+[2024-05-22T21:36:40+0800] [ALPM] removed obsidian (1.5.12-1)
+[2024-05-22T21:36:40+0800] [ALPM] removed electron28 (28.3.1-3)
+[2024-05-22T21:36:40+0800] [ALPM] removed libxslt (1.1.39-2)
+[2024-05-22T21:36:40+0800] [ALPM] transaction completed
+[2024-05-22T21:36:40+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-22T21:36:40+0800] [ALPM] running 'update-desktop-database.hook'...
+[2024-05-22T21:37:15+0800] [PACMAN] Running 'pacman -Rsc noto-fonts'
+[2024-05-22T21:37:18+0800] [ALPM] transaction started
+[2024-05-22T21:37:18+0800] [ALPM] removed noto-fonts (1:24.5.1-1)
+[2024-05-22T21:37:19+0800] [ALPM] transaction completed
+[2024-05-22T21:37:19+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-22T21:37:19+0800] [ALPM] running '40-fontconfig-config.hook'...
+[2024-05-22T21:37:19+0800] [ALPM] running 'fontconfig.hook'...
+[2024-05-22T21:37:19+0800] [ALPM] running 'xorg-mkfontscale.hook'...
+[2024-05-23T00:21:52+0800] [PACMAN] Running 'pacman -Syu'
+[2024-05-23T00:21:52+0800] [PACMAN] synchronizing package lists
+[2024-05-23T00:21:53+0800] [PACMAN] starting full system upgrade
+[2024-05-23T15:06:50+0800] [PACMAN] Running 'pacman --sync -y -u --'
+[2024-05-23T15:06:50+0800] [PACMAN] synchronizing package lists
+[2024-05-23T15:06:52+0800] [PACMAN] starting full system upgrade
+[2024-05-23T16:57:14+0800] [PACMAN] Running 'pacman --sync -c -c --'
+[2024-05-23T16:57:23+0800] [PACMAN] Running 'pacman --sync -y -u --'
+[2024-05-23T16:57:23+0800] [PACMAN] synchronizing package lists
+[2024-05-23T16:57:25+0800] [PACMAN] starting full system upgrade
+[2024-05-23T20:20:05+0800] [PACMAN] Running 'pacman -Syu'
+[2024-05-23T20:20:05+0800] [PACMAN] synchronizing package lists
+[2024-05-23T20:20:07+0800] [PACMAN] starting full system upgrade
+[2024-05-24T00:31:57+0800] [PACMAN] Running 'pacman -Syu'
+[2024-05-24T00:31:57+0800] [PACMAN] synchronizing package lists
+[2024-05-24T00:31:59+0800] [PACMAN] starting full system upgrade
+[2024-05-24T14:28:57+0800] [PACMAN] Running 'pacman --sync -y -u --'
+[2024-05-24T14:28:57+0800] [PACMAN] synchronizing package lists
+[2024-05-24T14:28:59+0800] [PACMAN] starting full system upgrade
+[2024-05-24T14:29:49+0800] [ALPM] running '60-mkinitcpio-remove.hook'...
+[2024-05-24T14:29:49+0800] [ALPM] running 'texinfo-remove.hook'...
+[2024-05-24T14:29:49+0800] [ALPM] transaction started
+[2024-05-24T14:29:50+0800] [ALPM] upgraded gcc-libs (14.1.1+r1+g43b730b9134-1 -> 14.1.1+r58+gfc9fb69ad62-1)
+[2024-05-24T14:29:50+0800] [ALPM] upgraded ncurses (6.4_20230520-3 -> 6.5-2)
+[2024-05-24T14:29:50+0800] [ALPM] installed gtest (1.14.0-1)
+[2024-05-24T14:29:50+0800] [ALPM] upgraded abseil-cpp (20240116.2-1 -> 20240116.2-2)
+[2024-05-24T14:29:50+0800] [ALPM] upgraded libnghttp2 (1.62.0-1 -> 1.62.1-1)
+[2024-05-24T14:29:50+0800] [ALPM] upgraded zstd (1.5.5-1 -> 1.5.6-1)
+[2024-05-24T14:29:50+0800] [ALPM] upgraded e2fsprogs (1.47.0-2 -> 1.47.1-2)
+[2024-05-24T14:29:50+0800] [ALPM] upgraded libcap (2.69-4 -> 2.70-1)
+[2024-05-24T14:29:50+0800] [ALPM] upgraded systemd-libs (255.6-1 -> 255.6-2)
+[2024-05-24T14:29:50+0800] [ALPM] upgraded curl (8.7.1-6 -> 8.8.0-1)
+[2024-05-24T14:29:51+0800] [ALPM] upgraded drawio-desktop-bin (24.4.0-1 -> 24.4.6-1)
+[2024-05-24T14:29:51+0800] [ALPM] upgraded gcc (14.1.1+r1+g43b730b9134-1 -> 14.1.1+r58+gfc9fb69ad62-1)
+[2024-05-24T14:29:51+0800] [ALPM] upgraded hicolor-icon-theme (0.17-3 -> 0.18-1)
+[2024-05-24T14:29:51+0800] [ALPM] upgraded systemd (255.6-1 -> 255.6-2)
+[2024-05-24T14:29:52+0800] [ALPM] upgraded kwidgetsaddons (6.2.0-1 -> 6.2.1-1)
+[2024-05-24T14:29:52+0800] [ALPM] upgraded lib32-libnghttp2 (1.62.0-1 -> 1.62.1-1)
+[2024-05-24T14:29:52+0800] [ALPM] upgraded lib32-zstd (1.5.5-1 -> 1.5.6-1)
+[2024-05-24T14:29:52+0800] [ALPM] upgraded lib32-gcc-libs (14.1.1+r1+g43b730b9134-1 -> 14.1.1+r58+gfc9fb69ad62-1)
+[2024-05-24T14:29:52+0800] [ALPM] upgraded lib32-e2fsprogs (1.47.0-1 -> 1.47.1-1)
+[2024-05-24T14:29:52+0800] [ALPM] upgraded lib32-curl (8.7.1-4 -> 8.8.0-1)
+[2024-05-24T14:29:52+0800] [ALPM] upgraded lib32-libcap (2.69-1 -> 2.70-1)
+[2024-05-24T14:29:52+0800] [ALPM] upgraded lib32-ncurses (6.4_20230520-1 -> 6.5-1)
+[2024-05-24T14:29:52+0800] [ALPM] upgraded librime (1:1.10.0-3 -> 1:1.11.0-1)
+[2024-05-24T14:29:52+0800] [ALPM] upgraded libwireplumber (0.5.2-1 -> 0.5.2-2)
+[2024-05-24T14:29:53+0800] [ALPM] upgraded linux (6.9.1.arch1-1 -> 6.9.1.arch1-2)
+[2024-05-24T14:29:53+0800] [ALPM] upgraded mpv (1:0.38.0-2 -> 1:0.38.0-4)
+[2024-05-24T14:29:53+0800] [ALPM] installed glibmm-2.68 (2.80.0-1)
+[2024-05-24T14:29:53+0800] [ALPM] installed cairomm-1.16 (1.18.0-1)
+[2024-05-24T14:29:53+0800] [ALPM] installed pangomm-2.48 (2.52.0-1)
+[2024-05-24T14:29:53+0800] [ALPM] installed gtkmm-4.0 (4.14.0-1)
+[2024-05-24T14:29:53+0800] [ALPM] upgraded pavucontrol (1:5.0+r66+gc330506-1 -> 1:6.0-1)
+[2024-05-24T14:29:53+0800] [ALPM] upgraded python-trove-classifiers (2024.5.17-1 -> 2024.5.22-1)
+[2024-05-24T14:29:53+0800] [ALPM] upgraded systemd-sysvcompat (255.6-1 -> 255.6-2)
+[2024-05-24T14:29:53+0800] [ALPM] upgraded tmux (3.4-7 -> 3.4-8)
+[2024-05-24T14:29:53+0800] [ALPM] upgraded v2ray-geoip (202405160040-1 -> 202405230041-1)
+[2024-05-24T14:29:53+0800] [ALPM] upgraded virtualbox-host-modules-arch (7.0.18-4 -> 7.0.18-5)
+[2024-05-24T14:29:54+0800] [ALPM] transaction completed
+[2024-05-24T14:29:54+0800] [ALPM] running '20-systemd-sysusers.hook'...
+[2024-05-24T14:29:54+0800] [ALPM] running '30-systemd-catalog.hook'...
+[2024-05-24T14:29:54+0800] [ALPM] running '30-systemd-daemon-reload-system.hook'...
+[2024-05-24T14:29:54+0800] [ALPM] running '30-systemd-daemon-reload-user.hook'...
+[2024-05-24T14:29:55+0800] [ALPM] running '30-systemd-hwdb.hook'...
+[2024-05-24T14:29:55+0800] [ALPM] running '30-systemd-sysctl.hook'...
+[2024-05-24T14:29:55+0800] [ALPM] running '30-systemd-tmpfiles.hook'...
+[2024-05-24T14:29:55+0800] [ALPM] running '30-systemd-udev-reload.hook'...
+[2024-05-24T14:29:56+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-24T14:29:56+0800] [ALPM] running '30-update-mime-database.hook'...
+[2024-05-24T14:29:56+0800] [ALPM] running '60-depmod.hook'...
+[2024-05-24T14:29:57+0800] [ALPM] running '90-mkinitcpio-install.hook'...
+[2024-05-24T14:29:58+0800] [ALPM-SCRIPTLET] ==> Building image from preset: /etc/mkinitcpio.d/linux.preset: 'default'
+[2024-05-24T14:29:58+0800] [ALPM-SCRIPTLET] ==> Using default configuration file: '/etc/mkinitcpio.conf'
+[2024-05-24T14:29:58+0800] [ALPM-SCRIPTLET]   -> -k /boot/vmlinuz-linux -g /boot/initramfs-linux.img
+[2024-05-24T14:29:58+0800] [ALPM-SCRIPTLET] ==> Starting build: '6.9.1-arch1-2'
+[2024-05-24T14:29:58+0800] [ALPM-SCRIPTLET]   -> Running build hook: [base]
+[2024-05-24T14:29:58+0800] [ALPM-SCRIPTLET]   -> Running build hook: [udev]
+[2024-05-24T14:29:58+0800] [ALPM-SCRIPTLET]   -> Running build hook: [autodetect]
+[2024-05-24T14:29:59+0800] [ALPM-SCRIPTLET]   -> Running build hook: [microcode]
+[2024-05-24T14:29:59+0800] [ALPM-SCRIPTLET]   -> Running build hook: [modconf]
+[2024-05-24T14:29:59+0800] [ALPM-SCRIPTLET]   -> Running build hook: [kms]
+[2024-05-24T14:30:01+0800] [ALPM-SCRIPTLET]   -> Running build hook: [keyboard]
+[2024-05-24T14:30:01+0800] [ALPM-SCRIPTLET] ==> WARNING: Possibly missing firmware for module: 'xhci_pci'
+[2024-05-24T14:30:01+0800] [ALPM-SCRIPTLET]   -> Running build hook: [keymap]
+[2024-05-24T14:30:02+0800] [ALPM-SCRIPTLET]   -> Running build hook: [consolefont]
+[2024-05-24T14:30:02+0800] [ALPM-SCRIPTLET] ==> WARNING: consolefont: no font found in configuration
+[2024-05-24T14:30:02+0800] [ALPM-SCRIPTLET]   -> Running build hook: [block]
+[2024-05-24T14:30:02+0800] [ALPM-SCRIPTLET]   -> Running build hook: [filesystems]
+[2024-05-24T14:30:02+0800] [ALPM-SCRIPTLET]   -> Running build hook: [fsck]
+[2024-05-24T14:30:02+0800] [ALPM-SCRIPTLET] ==> Generating module dependencies
+[2024-05-24T14:30:02+0800] [ALPM-SCRIPTLET] ==> Creating zstd-compressed initcpio image: '/boot/initramfs-linux.img'
+[2024-05-24T14:30:02+0800] [ALPM-SCRIPTLET]   -> Early uncompressed CPIO image generation successful
+[2024-05-24T14:30:02+0800] [ALPM-SCRIPTLET] ==> Initcpio image generation successful
+[2024-05-24T14:30:02+0800] [ALPM-SCRIPTLET] ==> Building image from preset: /etc/mkinitcpio.d/linux.preset: 'fallback'
+[2024-05-24T14:30:02+0800] [ALPM-SCRIPTLET] ==> Using default configuration file: '/etc/mkinitcpio.conf'
+[2024-05-24T14:30:02+0800] [ALPM-SCRIPTLET]   -> -k /boot/vmlinuz-linux -g /boot/initramfs-linux-fallback.img -S autodetect
+[2024-05-24T14:30:02+0800] [ALPM-SCRIPTLET] ==> Starting build: '6.9.1-arch1-2'
+[2024-05-24T14:30:02+0800] [ALPM-SCRIPTLET]   -> Running build hook: [base]
+[2024-05-24T14:30:03+0800] [ALPM-SCRIPTLET]   -> Running build hook: [udev]
+[2024-05-24T14:30:03+0800] [ALPM-SCRIPTLET]   -> Running build hook: [microcode]
+[2024-05-24T14:30:03+0800] [ALPM-SCRIPTLET]   -> Running build hook: [modconf]
+[2024-05-24T14:30:03+0800] [ALPM-SCRIPTLET]   -> Running build hook: [kms]
+[2024-05-24T14:30:05+0800] [ALPM-SCRIPTLET] ==> WARNING: Possibly missing firmware for module: 'ast'
+[2024-05-24T14:30:10+0800] [ALPM-SCRIPTLET]   -> Running build hook: [keyboard]
+[2024-05-24T14:30:10+0800] [ALPM-SCRIPTLET] ==> WARNING: Possibly missing firmware for module: 'xhci_pci'
+[2024-05-24T14:30:10+0800] [ALPM-SCRIPTLET]   -> Running build hook: [keymap]
+[2024-05-24T14:30:10+0800] [ALPM-SCRIPTLET]   -> Running build hook: [consolefont]
+[2024-05-24T14:30:10+0800] [ALPM-SCRIPTLET] ==> WARNING: consolefont: no font found in configuration
+[2024-05-24T14:30:10+0800] [ALPM-SCRIPTLET]   -> Running build hook: [block]
+[2024-05-24T14:30:11+0800] [ALPM-SCRIPTLET] ==> WARNING: Possibly missing firmware for module: 'aic94xx'
+[2024-05-24T14:30:11+0800] [ALPM-SCRIPTLET] ==> WARNING: Possibly missing firmware for module: 'bfa'
+[2024-05-24T14:30:11+0800] [ALPM-SCRIPTLET] ==> WARNING: Possibly missing firmware for module: 'qed'
+[2024-05-24T14:30:11+0800] [ALPM-SCRIPTLET] ==> WARNING: Possibly missing firmware for module: 'qla1280'
+[2024-05-24T14:30:11+0800] [ALPM-SCRIPTLET] ==> WARNING: Possibly missing firmware for module: 'qla2xxx'
+[2024-05-24T14:30:12+0800] [ALPM-SCRIPTLET] ==> WARNING: Possibly missing firmware for module: 'wd719x'
+[2024-05-24T14:30:13+0800] [ALPM-SCRIPTLET]   -> Running build hook: [filesystems]
+[2024-05-24T14:30:13+0800] [ALPM-SCRIPTLET]   -> Running build hook: [fsck]
+[2024-05-24T14:30:15+0800] [ALPM-SCRIPTLET] ==> Generating module dependencies
+[2024-05-24T14:30:16+0800] [ALPM-SCRIPTLET] ==> Creating zstd-compressed initcpio image: '/boot/initramfs-linux-fallback.img'
+[2024-05-24T14:30:17+0800] [ALPM-SCRIPTLET]   -> Early uncompressed CPIO image generation successful
+[2024-05-24T14:30:17+0800] [ALPM-SCRIPTLET] ==> Initcpio image generation successful
+[2024-05-24T14:30:17+0800] [ALPM] running 'dbus-reload.hook'...
+[2024-05-24T14:30:17+0800] [ALPM] running 'gtk-update-icon-cache.hook'...
+[2024-05-24T14:30:18+0800] [ALPM] running 'texinfo-install.hook'...
+[2024-05-24T14:30:18+0800] [ALPM] running 'update-desktop-database.hook'...
+[2024-05-24T14:35:06+0800] [PACMAN] Running 'pacman -Rsc an-anime-game-launcher-bin'
+[2024-05-24T16:13:36+0800] [PACMAN] Running 'pacman -Rsc feh'
+[2024-05-24T16:13:37+0800] [ALPM] transaction started
+[2024-05-24T16:13:37+0800] [ALPM] removed feh (3.10.2-1)
+[2024-05-24T16:13:37+0800] [ALPM] transaction completed
+[2024-05-24T16:13:37+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-24T16:13:37+0800] [ALPM] running 'gtk-update-icon-cache.hook'...
+[2024-05-24T16:13:37+0800] [ALPM] running 'update-desktop-database.hook'...
+[2024-05-24T20:15:33+0800] [PACMAN] Running 'pacman -Syu'
+[2024-05-24T20:15:33+0800] [PACMAN] synchronizing package lists
+[2024-05-24T20:15:35+0800] [PACMAN] starting full system upgrade
+[2024-05-24T20:15:37+0800] [ALPM] transaction started
+[2024-05-24T20:15:37+0800] [ALPM] upgraded hyprlang (0.5.1-1 -> 0.5.2-1)
+[2024-05-24T20:15:38+0800] [ALPM] transaction completed
+[2024-05-24T20:15:38+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-24T20:55:19+0800] [PACMAN] Running 'pacman -Rsc an-anime-game-launcher-bin'
+[2024-05-24T20:55:20+0800] [ALPM] transaction started
+[2024-05-24T20:55:20+0800] [ALPM] removed an-anime-game-launcher-bin (3.9.6-1)
+[2024-05-24T20:55:20+0800] [ALPM] removed xdelta3 (3.1.0-4)
+[2024-05-24T20:55:20+0800] [ALPM] removed ncompress (5.0-2)
+[2024-05-24T20:55:20+0800] [ALPM] removed p7zip (1:17.05-2)
+[2024-05-24T20:55:20+0800] [ALPM] removed libadwaita (1:1.5.0-1)
+[2024-05-24T20:55:20+0800] [ALPM] removed appstream (1.0.3-1)
+[2024-05-24T20:55:20+0800] [ALPM] removed libxmlb (0.3.19-1)
+[2024-05-24T20:55:20+0800] [ALPM] transaction completed
+[2024-05-24T20:55:20+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-24T20:55:20+0800] [ALPM] running 'update-desktop-database.hook'...
+[2024-05-24T20:55:50+0800] [PACMAN] Running 'pacman --sync --noconfirm -- extra/libxmlb extra/appstream extra/libadwaita extra/ncompress extra/xdelta3 extra/p7zip'
+[2024-05-24T20:55:50+0800] [ALPM] transaction started
+[2024-05-24T20:55:50+0800] [ALPM] installed libxmlb (0.3.19-1)
+[2024-05-24T20:55:51+0800] [ALPM] installed appstream (1.0.3-1)
+[2024-05-24T20:55:51+0800] [ALPM] installed libadwaita (1:1.5.0-1)
+[2024-05-24T20:55:51+0800] [ALPM] installed ncompress (5.0-2)
+[2024-05-24T20:55:51+0800] [ALPM] installed xdelta3 (3.1.0-4)
+[2024-05-24T20:55:51+0800] [ALPM] installed p7zip (1:17.05-2)
+[2024-05-24T20:55:51+0800] [ALPM] transaction completed
+[2024-05-24T20:55:51+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-24T20:55:51+0800] [ALPM] running '90-update-appstream-cache.hook'...
+[2024-05-24T20:55:51+0800] [ALPM-SCRIPTLET] ✔ Metadata cache was updated successfully.
+[2024-05-24T20:55:51+0800] [PACMAN] Running 'pacman --database --asdeps -- libxmlb appstream libadwaita ncompress xdelta3 p7zip'
+[2024-05-24T20:59:17+0800] [PACMAN] Running 'pacman --upgrade --noconfirm -- /home/greanoia/.cache/paru/clone/an-anime-game-launcher-bin/an-anime-game-launcher-bin-3.9.6-1-x86_64.pkg.tar.zst'
+[2024-05-24T20:59:17+0800] [ALPM] transaction started
+[2024-05-24T20:59:17+0800] [ALPM] installed an-anime-game-launcher-bin (3.9.6-1)
+[2024-05-24T20:59:17+0800] [ALPM] transaction completed
+[2024-05-24T20:59:17+0800] [ALPM] running '30-systemd-update.hook'...
+[2024-05-24T20:59:17+0800] [ALPM] running 'update-desktop-database.hook'...
+[2024-05-24T20:59:17+0800] [PACMAN] Running 'pacman --database --asexplicit -- an-anime-game-launcher-bin'
+[2024-05-24T21:04:59+0800] [PACMAN] Running 'pacman --sync -c -c --'
