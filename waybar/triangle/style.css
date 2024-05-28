@@ -286,9 +286,11 @@ label:focus {
     border-top: 2px solid rgba(147,47,255,1);
 }
 
+/*
 #pulseaudio.muted {
     color: #af5fff;
 }
+*/
 
 #temperature {
     color: #d40000;

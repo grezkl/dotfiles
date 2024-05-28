@@ -93,6 +93,7 @@
         "format": "{icon}",
         "format-icons": {
             "1": "<span font-family=\"Font Awesome 6 Free Solid\"></span>",
+            // "1": "",
             "2": "<span font-family=\"Font Awesome 6 Brands\">\ue007</span>",
             "3": "<span font-family=\"Font Awesome 6 Free Solid\"></span>",
             "4": "",
@@ -102,8 +103,8 @@
             "8": "<span font-family=\"Font Awesome 6 Brands\"></span>",
             "9": "<span font-family=\"Font Awesome 6 Free Solid\">\uf0a0</span>",
             "10":"",
-// # bspc monitor -d          
-//                  p    
+// # bspc monitor -d                  
+// 󰒋                       
          //"urgent": "",
          //"active": "",
          "default": ""
@@ -135,22 +136,26 @@
     // "format":" {:%Y-%m-%d %H:%M:%S}",
     "format":"<span font-family=\"Font Awesome 6 Free Solid\"></span> {:%H:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "<span font-family=\"Font Awesome 6 Free Solid\"> {:%Y-%m-%d}</span>"
+    "format-alt": "<span font-family=\"Font Awesome 6 Free Solid\"></span> {:%Y-%m-%d}"
 },
 "cpu": {
-    "interval":2,
+    "interval":5,
     "format": " {usage}%",
     "tooltip": true
 },
 // 
 "memory": {
-    "interval":2,
-    "format": "\uf538 {}%"
+    "interval":5,
+    "format": "\uf538 {}%",
+    "format-alt": "\uf538 {swapUsed:0.1f}G[swap]",
+    // "tooltip": true,
+    // "tooltip-format": "\uf538 {}%"
 },
 "temperature": {
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         // "format-critical": "{temperatureC}°C {icon}",
+        // "interval":10,
         "critical-threshold": 80,
         "format": "{icon} {temperatureC}°C",
         "format-icons": ["", "", ""]
@@ -166,10 +171,14 @@
             "warning": 30,
             "critical": 15
     },
-    "format": "{icon} {capacity}%[$]",
-    "format-full": "{icon} {capacity}%[@]",
-    "format-charging": " {capacity}%[#]",
-    "format-plugged": " {capacity}%[&]",
+    // "format": "{icon} {capacity}%[$]",
+    // "format-full": "{icon} {capacity}%[@]",
+    // "format-charging": " {capacity}%[#]",
+    // "format-plugged": " {capacity}%[&]",
+    "format": "{icon} {capacity}%",
+    "format-full": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
     "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
