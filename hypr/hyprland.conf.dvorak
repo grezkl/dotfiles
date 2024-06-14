@@ -207,7 +207,7 @@ misc {
 # https://wiki.hyprland.org/Configuring/Variables/#input
 input {
     kb_layout = us
-    kb_variant =
+    kb_variant = dvorak
     kb_model =
     kb_options=caps:swapescape
     kb_rules =
@@ -257,8 +257,8 @@ bind = $mainMod Shift, Return , exec , [ float  ; size 60% 60% ] $terminal
 bind = $mainMod, SPACE, exec, $menu
 
 bind = $mainMod, F, fullscreen, 0
-bind = $mainMod, P, pseudo, # dwindle
-bind = $mainMod, V, togglesplit, # dwindle
+bind = $mainMod Shift, P, pseudo, # dwindle
+bind = $mainMod Shift, E, togglesplit, # dwindle
 
 # Move focus with mainMod + arrow keys
 #bind = $mainMod, left, movefocus, l
@@ -293,17 +293,17 @@ bind = $mainMod SHIFT, 0, movetoworkspace, 10
 
 # Example special workspace (scratchpad)
 #bind = $mainMod, S, togglespecialworkspace, magic
-bind = $mainMod Shift, S, movetoworkspace, special:magic
+# bind = $mainMod SHIFT, period, movetoworkspace, special:magic
 
-bind = $mainMod, S, togglespecialworkspace, magic
-bind = $mainMod, S, movetoworkspace, +0
-bind = $mainMod, S, togglespecialworkspace, magic
-bind = $mainMod, S, movetoworkspace, special:magic
-bind = $mainMod, S, togglespecialworkspace, magic
+# bind = $mainMod, period, togglespecialworkspace, magic
+# bind = $mainMod, period, movetoworkspace, +0
+# bind = $mainMod, period, togglespecialworkspace, magic
+# bind = $mainMod, period, movetoworkspace, special:magic
+# bind = $mainMod, period, togglespecialworkspace, magic
 
 # Scroll through existing workspaces with mainMod + scroll
-bind = $mainMod, period, workspace, e+1
-bind = $mainMod, comma, workspace, e-1
+bind = $mainMod, W, workspace, e-1
+bind = $mainMod, V, workspace, e+1
 
 # All workspaces
 # bind = $mainMod, period, workspace, r+1
@@ -323,8 +323,8 @@ binds{
 bind = $mainMod, Tab, workspace,previous
 
 # Volume
-bind = $mainMod Shift, bracketleft, exec, pactl set-sink-volume 0 -5%
-bind = $mainMod Shift, bracketright, exec, pactl set-sink-volume 0 +5%
+bind = $mainMod, D, exec, pactl set-sink-volume 0 -5%
+bind = $mainMod SHIFT, D, exec, pactl set-sink-volume 0 +5%
 bind = $mainMod CTRL, M, exec, pactl set-sink-mute 0 toggle
 
 # Backlight
@@ -335,24 +335,24 @@ bind = $mainMod Alt, bracketright, exec, brightnessctl s 5%+; $msg "current brig
 
 # Mpd music
 bind = $mainMod Shift, C, exec, mpc prev
-bind = $mainMod, X, exec, mpc toggle
+bind = $mainMod, R, exec, mpc toggle
 bind = $mainMod, C, exec, mpc next
 
 # Screenshot grim & slurp
 $screenFile = ${HOME}/med1a/pictures/screenshots/$(date +"%Y-%m-%d-%H%M%S")_grim.png
 
-bind = $mainMod, U, exec, grim $screenFile; $msg "full screenshots success" "$screenFile"
-bind = $mainMod Shift, U, exec, grim -g "$(slurp)" $screenFile; $msg "area screenshots success" "$screenFile"
+bind = $mainMod, G, exec, grim $screenFile && $msg "full screenshots success" "$screenFile"
+bind = $mainMod Shift, G, exec, grim -g "$(slurp)" $screenFile && $msg "area screenshots success" "$screenFile"
 
 # File Manager Pcmanfm
-bind = $mainMod, Q, exec, $fm
+bind = $mainMod, period, exec, $fm
 
 # Notebook Leafpad
-bind = $mainMod Shift, A, exec, $notebook
+bind = $mainMod Shift, period, exec, $notebook
 
 # Move cursor
 # bind = $mainMod CTRL, semicolon,exec,hyprctl dispatch movecursor 720 450
-bind = $mainMod, W, exec, hyprctl dispatch movecursor 600 10 
+bind = $mainMod, A, exec, hyprctl dispatch movecursor 600 10 
 
 # SUPER+Shift+HJKL movewindow
 bind=$mainMod SHIFT,h,movewindow,l
@@ -373,7 +373,7 @@ bind=$mainMod SHIFT,k,movewindow,u
 #bind = Shift, s, exec, systemctl poweroff
 
 # Super + R：切换到RESIZE模式
-bind= $mainMod,R,submap,resize
+bind= $mainMod,P,submap,resize
 submap=resize
 
     # 在RESIZE模式下使用hjkl调整窗口大小
@@ -387,8 +387,8 @@ submap=resize
 submap=reset
 
 # Lock & Suspend
-bind=$mainMod Alt, P, exec, $lock
-bind=$mainMod Shift, P, exec, systemctl suspend
+bind=$mainMod Alt, Y, exec, $lock
+bind=$mainMod Shift, Y, exec, systemctl suspend
 
 # Swap windows
 bind = $mainMod, E, layoutmsg, swapsplit
@@ -403,11 +403,11 @@ bind = $mainMod, M, fullscreen, 1
 # bindl=,switch:[switch name],exec,swaylock
 
 # Touchpad
-bind = $mainMod, T, exec, hyprctl keyword $touchpad 0 && $msg "hyprctl msg" "disable touchpad"
-bind = $mainMod Shift, T, exec, hyprctl keyword $touchpad 1 && $msg "hyprctl msg" "enable touchpad"
+bind = $mainMod, I, exec, hyprctl keyword $touchpad 0 && $msg "hyprctl msg" "disable touchpad"
+bind = $mainMod Shift, I, exec, hyprctl keyword $touchpad 1 && $msg "hyprctl msg" "enable touchpad"
 
 # Clipboard
-bind = $mainMod, A, exec, cliphist list | wofi --dmenu --gtk-dark --normal-window true | cliphist decode | wl-copy
+bind = $mainMod, T, exec, cliphist list | wofi --dmenu --gtk-dark --normal-window true | cliphist decode | wl-copy
 
 ##############################
 ### WINDOWS AND WORKSPACES ###
@@ -443,6 +443,6 @@ windowrulev2 = suppressevent maximize, class:.* # You'll probably like this.
 windowrulev2 = float,class:^(org.telegram.desktop)$,title:^(Media viewer)$
 
 # unused key
-# yio
-# dg
-# zbn
+# brackte*
+# aoun
+# qxb
