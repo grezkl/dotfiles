@@ -74,9 +74,9 @@ exec-once = xrdb -merge ~/.dotfiles/xorg/Xresources
 # See https://wiki.hyprland.org/Configuring/Environment-variables/
 
 # XDG
-env = XDG_CURRENT_DESKTOP, Hyprland
-env = XDG_SESSION_TYPE, wayland
-env = XDG_SESSION_DESKTOP, Hyprland
+env = XDG_CURRENT_DESKTOP,Hyprland
+env = XDG_SESSION_TYPE,wayland
+env = XDG_SESSION_DESKTOP,Hyprland
 
 # Fcitx
 env=XMODIFIERS, @im=fcitx
@@ -85,27 +85,27 @@ env=SDL_IM_MODULE, fcitx
 
 # QT
 env = QT_AUTO_SCREEN_SCALE_FACTOR, 1
-env = QT_QPA_PLATFORM, wayland; xcb
+env = QT_QPA_PLATFORM, wayland;xcb
 env = QT_WAYLAND_DISABLE_WINDOWDECORATION, 1
-env = QT_QPA_PLATFORMTHEME, qt6ct
+env = QT_QPA_PLATFORMTHEME,qt6ct
 
 # Misc
 #env = GDK_BACKEND, x11
-env = GDK_BACKEND, wayland, x11
+env = GDK_BACKEND, wayland,x11
 env = CLUTTER_BACKEND, wayland
 env = ADW_DISABLE_PORTAL, 1
 
 # Hyprcursor
-env = HYPRCURSOR_SIZE, 32
-env = HYPRCURSOR_THEME, rose-pine-hyprcursor
+env = HYPRCURSOR_SIZE,32
+env = HYPRCURSOR_THEME,rose-pine-hyprcursor
 
 # Xwayland Hidpi
 xwayland {
 	force_zero_scaling = true
 }
 # toolkit-specific scale
-env = GDK_SCALE, 2
-env = XCURSOR_SIZE, 32
+env = GDK_SCALE,2
+env = XCURSOR_SIZE,32
 
 #####################
 ### LOOK AND FEEL ###
@@ -207,9 +207,9 @@ misc {
 # https://wiki.hyprland.org/Configuring/Variables/#input
 input {
     kb_layout = us
-    kb_variant = dvorak
+    kb_variant =
     kb_model =
-    kb_options = caps:swapescape
+    kb_options=caps:swapescape
     kb_rules =
     repeat_rate = 35
     repeat_delay = 450
@@ -246,19 +246,19 @@ device {
 $mainMod = SUPER # Sets "Windows" key as main modifier
 
 # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
-bind = $mainMod Alt, W, exit
-bind = $mainMod Shift, W, killactive
+bind = $mainMod Alt, Q, exit,
+bind = $mainMod Shift, W, killactive,
 
-bind = $mainMod	Shift, SPACE, togglefloating
-bind = $mainMod	Shift, SPACE, centerwindow , 1
+bind = $mainMod	Shift, SPACE, togglefloating,
+bind = $mainMod	Shift, SPACE, centerwindow ,1
 
 bind = $mainMod, Return, exec, $terminal
 bind = $mainMod Shift, Return , exec , [ float  ; size 60% 60% ] $terminal
 bind = $mainMod, SPACE, exec, $menu
 
 bind = $mainMod, F, fullscreen, 0
-bind = $mainMod Shift, P, pseudo # dwindle
-bind = $mainMod Shift, Q, togglesplit # dwindle
+bind = $mainMod, P, pseudo, # dwindle
+bind = $mainMod, V, togglesplit, # dwindle
 
 # Move focus with mainMod + arrow keys
 #bind = $mainMod, left, movefocus, l
@@ -302,12 +302,12 @@ bind = $mainMod, S, movetoworkspace, special:magic
 bind = $mainMod, S, togglespecialworkspace, magic
 
 # Scroll through existing workspaces with mainMod + scroll
-bind = $mainMod, W, workspace, e-1
-bind = $mainMod, V, workspace, e+1
+bind = $mainMod, period, workspace, e+1
+bind = $mainMod, comma, workspace, e-1
 
 # All workspaces
-# bind = $mainMod, comma, workspace, r-1
 # bind = $mainMod, period, workspace, r+1
+# bind = $mainMod, comma, workspace, r-1
 
 # Move/resize windows with mainMod + LMB/RMB and dragging
 bindm = $mainMod, mouse:272, movewindow
@@ -320,45 +320,45 @@ binds{
 
 	#workspace_center_on = 1
 }
-bind = $mainMod, Tab, workspace, previous
+bind = $mainMod, Tab, workspace,previous
 
 # Volume
-bind = $mainMod, A, exec, pactl set-sink-volume 0 -5%
-bind = $mainMod Shift, A, exec, pactl set-sink-volume 0 +5%
-bind = $mainMod Shift, E, exec, pactl set-sink-mute 0 toggle
+bind = $mainMod Shift, bracketleft, exec, pactl set-sink-volume 0 -5%
+bind = $mainMod Shift, bracketright, exec, pactl set-sink-volume 0 +5%
+bind = $mainMod CTRL, M, exec, pactl set-sink-mute 0 toggle
 
 # Backlight
 # bind = $mainMod Alt, bracketleft, exec, light -U 5; $msg "current brightness：" `light -G`
 # bind = $mainMod Alt, bracketright, exec, light -A 5; $msg "current brightness：" `light -G`
-bind = $mainMod, I, exec, brightnessctl s 5%-; $msg "current brightness：" `brightnessctl g`
-bind = $mainMod Shift, I, exec, brightnessctl s 5%+; $msg "current brightness：" `brightnessctl g`
+bind = $mainMod Alt, bracketleft, exec, brightnessctl s 5%-; $msg "current brightness：" `brightnessctl g`
+bind = $mainMod Alt, bracketright, exec, brightnessctl s 5%+; $msg "current brightness：" `brightnessctl g`
 
 # Mpd music
-bind = $mainMod, E, exec, mpc toggle
-bind = $mainMod Shift, O, exec, mpc prev
-bind = $mainMod, O, exec, mpc next
+bind = $mainMod Shift, C, exec, mpc prev
+bind = $mainMod, X, exec, mpc toggle
+bind = $mainMod, C, exec, mpc next
 
 # Screenshot grim & slurp
 $screenFile = ${HOME}/med1a/pictures/screenshots/$(date +"%Y-%m-%d-%H%M%S")_grim.png
 
-bind = $mainMod, T, exec, grim $screenFile && $msg "full screenshots success" "$screenFile"
-bind = $mainMod Shift, T, exec, grim -g "$(slurp)" $screenFile && $msg "area screenshots success" "$screenFile"
+bind = $mainMod, U, exec, grim $screenFile; $msg "full screenshots success" "$screenFile"
+bind = $mainMod Shift, U, exec, grim -g "$(slurp)" $screenFile; $msg "area screenshots success" "$screenFile"
 
 # File Manager Pcmanfm
-bind = $mainMod, period, exec, $fm
+bind = $mainMod, Q, exec, $fm
 
 # Notebook Leafpad
-bind = $mainMod Shift, period, exec, $notebook
+bind = $mainMod Shift, A, exec, $notebook
 
 # Move cursor
 # bind = $mainMod CTRL, semicolon,exec,hyprctl dispatch movecursor 720 450
-bind = $mainMod, D, exec, hyprctl dispatch movecursor 600 10 
+bind = $mainMod, W, exec, hyprctl dispatch movecursor 600 10 
 
 # SUPER+Shift+HJKL movewindow
-bind = $mainMod Shift, h, movewindow, l
-bind = $mainMod Shift, l, movewindow, r
-bind = $mainMod Shift, j, movewindow, d
-bind = $mainMod Shift, k, movewindow, u
+bind=$mainMod SHIFT,h,movewindow,l
+bind=$mainMod SHIFT,l,movewindow,r
+bind=$mainMod SHIFT,j,movewindow,d
+bind=$mainMod SHIFT,k,movewindow,u
 
 # Submap example
 #$mode-system = (l) lock | (e) exit | (s) suspend | (r) reboot | (Shift+s) poweroff
@@ -373,25 +373,25 @@ bind = $mainMod Shift, k, movewindow, u
 #bind = Shift, s, exec, systemctl poweroff
 
 # Super + R：切换到RESIZE模式
-bind= $mainMod, R, submap, resize
-submap = resize
+bind= $mainMod,R,submap,resize
+submap=resize
 
     # 在RESIZE模式下使用hjkl调整窗口大小
-    binde= , H, resizeactive, -10 0
-    binde= , L, resizeactive, 10 0
-    binde= , K, resizeactive, 0 -10
-    binde= , J, resizeactive, 0 10
+    binde=,H,resizeactive,-10 0
+    binde=,L,resizeactive,10 0
+    binde=,K,resizeactive,0 -10
+    binde=,J,resizeactive,0 10
 
     # ESC退出RESIZE模式
-    bind = , escape, submap, reset
-submap = reset
+    bind=,escape,submap,reset
+submap=reset
 
 # Lock & Suspend
-bind=$mainMod Alt, Y, exec, $lock
-bind=$mainMod Shift, Y, exec, systemctl suspend
+bind=$mainMod Alt, P, exec, $lock
+bind=$mainMod Shift, P, exec, systemctl suspend
 
 # Swap windows
-bind = $mainMod, Q, layoutmsg, swapsplit
+bind = $mainMod, E, layoutmsg, swapsplit
 
 # Reset the layouts on the current workspace to default (monocle-ish)
 bind = $mainMod, M, exec, $msg "layouts changes" "monocle-ish toggle"
@@ -403,11 +403,11 @@ bind = $mainMod, M, fullscreen, 1
 # bindl=,switch:[switch name],exec,swaylock
 
 # Touchpad
-bind = $mainMod, X, exec, hyprctl keyword $touchpad 0 && $msg "hyprctl msg" "disable touchpad"
-bind = $mainMod Shift, X, exec, hyprctl keyword $touchpad 1 && $msg "hyprctl msg" "enable touchpad"
+bind = $mainMod, T, exec, hyprctl keyword $touchpad 0 && $msg "hyprctl msg" "disable touchpad"
+bind = $mainMod Shift, T, exec, hyprctl keyword $touchpad 1 && $msg "hyprctl msg" "enable touchpad"
 
 # Clipboard
-bind = $mainMod, B, exec, cliphist list | wofi --dmenu --gtk-dark --normal-window true | cliphist decode | wl-copy
+bind = $mainMod, A, exec, cliphist list | wofi --dmenu --gtk-dark --normal-window true | cliphist decode | wl-copy
 
 ##############################
 ### WINDOWS AND WORKSPACES ###
@@ -443,6 +443,6 @@ windowrulev2 = suppressevent maximize, class:.* # You'll probably like this.
 windowrulev2 = float,class:^(org.telegram.desktop)$,title:^(Media viewer)$
 
 # unused key
-#R2 pgc brackte<left/right>
-#R3 un
-#R4 [none]
+# yio
+# dg
+# zbn
